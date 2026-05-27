@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../services/api_service.dart';
-
 import '../student/student_dashboard.dart';
 import '../admin/admin_dashboard.dart';
 import 'register_dialog.dart';
@@ -282,7 +280,59 @@ class _LoginScreenState extends State<LoginScreen>
                           ),
                         ),
 
-                        const SizedBox(height: 40),
+                        const SizedBox(height: 15),
+
+                        Container(
+
+                          width: double.infinity,
+
+                          padding: const EdgeInsets.all(14),
+
+                          decoration: BoxDecoration(
+
+                            color: Colors.green.shade50,
+
+                            borderRadius:
+                            BorderRadius.circular(14),
+
+                            border: Border.all(
+                              color: Colors.green.shade200,
+                            ),
+                          ),
+
+                          child: const Column(
+
+                            crossAxisAlignment:
+                            CrossAxisAlignment.start,
+
+                            children: [
+
+                              Text(
+
+                                'Cuenta de prueba:',
+
+                                style: TextStyle(
+
+                                  fontWeight: FontWeight.bold,
+
+                                  color: Colors.green,
+                                ),
+                              ),
+
+                              SizedBox(height: 6),
+
+                              Text(
+                                'Correo: parapruebas@gmail.com',
+                              ),
+
+                              Text(
+                                'Contraseña: pruebas123',
+                              ),
+                            ],
+                          ),
+                        ),
+
+                        const SizedBox(height: 30),
 
                         buildInput(
 
@@ -337,19 +387,22 @@ class _LoginScreenState extends State<LoginScreen>
                               ),
                             ),
 
-                            onPressed: () async {
+                            onPressed: () {
 
-                              final response =
-                              await ApiService.loginStudent(
+                              final email =
+                              emailController.text.trim();
 
-                                email:
-                                emailController.text,
+                              final password =
+                              passwordController.text.trim();
 
-                                password:
-                                passwordController.text,
-                              );
+                              /// LOGIN DEMO
+                              if (
+                              email ==
+                                  "parapruebas@gmail.com" &&
 
-                              if (response['success'] == true) {
+                                  password ==
+                                      "pruebas123"
+                              ) {
 
                                 Navigator.push(
 
@@ -366,13 +419,12 @@ class _LoginScreenState extends State<LoginScreen>
                                 ScaffoldMessenger.of(context)
                                     .showSnackBar(
 
-                                  SnackBar(
+                                  const SnackBar(
 
-                                    backgroundColor:
-                                    Colors.red,
+                                    backgroundColor: Colors.red,
 
                                     content: Text(
-                                      response['message'],
+                                      'Credenciales incorrectas',
                                     ),
                                   ),
                                 );
