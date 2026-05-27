@@ -1,0 +1,28 @@
+name: Flutter Web Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.22.0'
+
+      - run: flutter pub get
+        working-directory: frontend_flutter
+
+      - run: flutter build web --release --base-href "/UNISTEST-ESGUERRA-RUBEN/"
+        working-directory: frontend_flutter
+
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: frontend_flutter/build/web
