@@ -17,12 +17,12 @@ jobs:
           flutter-version: '3.22.0'
 
       - run: flutter pub get
-        working-directory: frontend_flutter
+        working-directory: UniTest_Elite_Final/frontend_flutter
 
-      - run: flutter build web --release --base-href "/UNISTEST-ESGUERRA-RUBEN/"
-        working-directory: frontend_flutter
+      - run: flutter build web --release --base-href "/UNITEST-ESGUERRA-RUBEN/"
+        working-directory: UniTest_Elite_Final/frontend_flutter
 
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: frontend_flutter/build/web
+          publish_dir: UniTest_Elite_Final/frontend_flutter/build/web
