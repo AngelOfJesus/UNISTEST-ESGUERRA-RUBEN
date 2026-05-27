@@ -19,7 +19,7 @@ jobs:
       - run: flutter pub get
         working-directory: UniTest_Elite_Final/frontend_flutter
 
-      - run: flutter build web --release --base-href "/UNITEST-ESGUERRA-RUBEN/"
+      - run: flutter build web --release --base-href "/UNISTEST-ESGUERRA-RUBEN/"
         working-directory: UniTest_Elite_Final/frontend_flutter
 
       - uses: peaceiris/actions-gh-pages@v3
