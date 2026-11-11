@@ -19,272 +19,231 @@ class _ExamScreenState extends State<ExamScreen> {
   Map<int, String> selectedAnswers = {};
 
   final List<Map<String, dynamic>> questions = [
-    // ==========================================
-    // 1. PRUEBAS PSICOLÓGICAS (Preguntas 1 - 3)
-    // ==========================================
     {
-      'category': 'Pruebas Psicológicas',
       'question':
-          'Durante la entrega final de un proyecto grupal, un integrante informa a última hora que no completó su parte. ¿Cuál es la respuesta psicológicamente más adaptativa y asertiva?',
+          '¿Qué arquitectura es más adecuada para sistemas distribuidos escalables?',
+      'image': 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+      'options': ['Microservicios', 'Monolito', 'MVC', 'Cliente-servidor']
+    },
+    {
+      'question': '¿Qué estructura optimiza búsquedas binarias?',
+      'image': 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+      'options': ['Array ordenado', 'Pila', 'Cola', 'Lista enlazada']
+    },
+    {
+      'question': '¿Qué diagrama UML representa interacción temporal?',
+      'image': 'https://images.unsplash.com/photo-1555949963-aa79dcee981c',
+      'options': ['Secuencia', 'Clases', 'Objetos', 'Paquetes']
+    },
+    {
+      'question': '¿Qué consulta SQL elimina duplicados?',
+      'image': 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d',
+      'options': ['DISTINCT', 'GROUP BY', 'ORDER BY', 'DELETE']
+    },
+    {
+      'question': '¿Qué patrón desacopla eventos?',
+      'image': 'https://images.unsplash.com/photo-1516321497487-e288fb19713f',
+      'options': ['Observer', 'Factory', 'Adapter', 'Singleton']
+    },
+    {
+      'question': '¿Qué metodología usa iteraciones rápidas?',
       'image': 'https://images.unsplash.com/photo-1522071820081-009f0129c71c',
+      'options': ['Scrum', 'Cascada', 'RUP', 'XP']
+    },
+    {
+      'question': '¿Qué principio SOLID evita dependencias rígidas?',
+      'image': 'https://images.unsplash.com/photo-1516116216624-53e697fedbea',
       'options': [
-        'Reorganizar de inmediato las tareas prioritarias con el equipo y establecer acuerdos claros sin atacar personalmente al compañero',
-        'Excluir al compañero sin dialogar y asumir todo el trabajo restante en silencio',
-        'Suspender la entrega del proyecto hasta que el compañero resuelva su parte solo',
-        'Exponer el conflicto de forma agresiva antes de buscar una solución práctica'
-      ],
-      'correctAnswer':
-          'Reorganizar de inmediato las tareas prioritarias con el equipo y establecer acuerdos claros sin atacar personalmente al compañero',
+        'Dependency Inversion',
+        'Open/Closed',
+        'Single Responsibility',
+        'Liskov'
+      ]
     },
     {
-      'category': 'Pruebas Psicológicas',
-      'question':
-          'Si obtienes una calificación inferior a la esperada en una prueba diagnóstica universitaria, ¿qué pensamiento refleja un locus de control interno saludable?',
-      'image': 'https://images.unsplash.com/photo-1557672186-269926e526c1',
+      'question': '¿Qué protocolo usa cifrado HTTPS?',
+      'image': 'https://images.unsplash.com/photo-1563013544-824ae1b704d3',
+      'options': ['TLS/SSL', 'FTP', 'SMTP', 'SSH']
+    },
+    {
+      'question': '¿Qué algoritmo tiene complejidad O(log n)?',
+      'image': 'https://images.unsplash.com/photo-1516321165247-4aa89a48be28',
       'options': [
-        'Identificar qué temas específicos fallaron y ajustar mi método de estudio para la siguiente evaluación',
-        'Asumir que las pruebas están diseñadas para reprobar y que el esfuerzo propio no influye',
-        'Abandonar la asignatura de inmediato pensando que no tengo aptitud para el estudio',
-        'Atribuir el resultado únicamente a la mala suerte sin revisar la retroalimentación'
-      ],
-      'correctAnswer':
-          'Identificar qué temas específicos fallaron y ajustar mi método de estudio para la siguiente evaluación',
+        'Búsqueda binaria',
+        'Bubble sort',
+        'Recorrido lineal',
+        'Inserción'
+      ]
     },
     {
-      'category': 'Pruebas Psicológicas',
-      'question':
-          'Cuando te enfrentas a un problema académico complejo cuya solución no aparece en el primer intento, ¿qué conducta demuestra alta tolerancia a la frustración?',
-      'image': 'https://images.unsplash.com/photo-1533073526757-2c8ca1df9f1c',
-      'options': [
-        'Dividir el problema en partes más pequeñas, analizar qué falló y probar una hipótesis alternativa',
-        'Repetir exactamente el mismo procedimiento fallido esperando un resultado distinto',
-        'Renunciar a la tarea en los primeros minutos por considerarla imposible',
-        'Culpar a las herramientas de trabajo sin revisar el planteamiento inicial'
-      ],
-      'correctAnswer':
-          'Dividir el problema en partes más pequeñas, analizar qué falló y probar una hipótesis alternativa',
-    },
-
-    // ==========================================
-    // 2. PSICOANALÍTICA (Preguntas 4 - 6)
-    // ==========================================
-    {
-      'category': 'Psicoanalítica',
-      'question':
-          'Desde la perspectiva psicoanalítica de los mecanismos de defensa del Yo, ¿cuál de las siguientes situaciones ejemplifica el mecanismo maduro de la sublimación?',
-      'image': 'https://images.unsplash.com/photo-1620802421041-cfb402036374',
-      'options': [
-        'Canalizar un estado de alta tensión emocional hacia la investigación científica, el arte o el estudio disciplinado',
-        'Atribuir a los compañeros de clase los propios sentimientos de inseguridad (proyección)',
-        'Negar que existe un examen programado para la semana siguiente (negación)',
-        'Adoptar conductas infantiles cuando una tarea resulta exigente (regresión)'
-      ],
-      'correctAnswer':
-          'Canalizar un estado de alta tensión emocional hacia la investigación científica, el arte o el estudio disciplinado',
+      'question': '¿Qué componente maneja rutas en Flutter?',
+      'image': 'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+      'options': ['Navigator', 'Scaffold', 'Container', 'FutureBuilder']
     },
     {
-      'category': 'Psicoanalítica',
-      'question':
-          'En el modelo estructural del aparato psíquico (Ello, Yo y Superyó), ¿qué función cumple el Yo (principio de realidad) frente a una decisión académica exigente?',
-      'image': 'https://images.unsplash.com/photo-1557672186-269926e526c1',
-      'options': [
-        'Mediar de forma consciente y realista entre los impulsos inmediatos y las normas éticas para tomar una decisión responsable',
-        'Buscar únicamente la gratificación instantánea evitando cualquier esfuerzo intelectual',
-        'Generar culpa paralizante ante cualquier error mínimo sin permitir el aprendizaje',
-        'Suprimir toda reflexión consciente y actuar por impulso automático'
-      ],
-      'correctAnswer':
-          'Mediar de forma consciente y realista entre los impulsos inmediatos y las normas éticas para tomar una decisión responsable',
+      'question': '¿Qué tipo de prueba valida módulos individuales?',
+      'image': 'https://images.unsplash.com/photo-1516321310764-8d4f1c2b0e0b',
+      'options': ['Unitarias', 'Integración', 'Aceptación', 'Estrés']
     },
     {
-      'category': 'Psicoanalítica',
-      'question':
-          'En una prueba proyectiva e introspectiva, ¿qué actitud evidencia madurez reflexiva e integración perceptual al analizar una situación ambigua?',
-      'image': 'https://images.unsplash.com/photo-1620802421041-cfb402036374',
-      'options': [
-        'Integrar el contexto global con los detalles específicos, reconociendo emociones propias antes de emitir un juicio',
-        'Bloquearse por completo y negarse a analizar la situación por temor al error',
-        'Fijarse únicamente en un detalle aislado ignorando por completo el contexto general',
-        'Imponer una interpretación rígida sin escuchar otras perspectivas posibles'
-      ],
-      'correctAnswer':
-          'Integrar el contexto global con los detalles específicos, reconociendo emociones propias antes de emitir un juicio',
-    },
-
-    // ==========================================
-    // 3. PSICOTÉCNICAS (Preguntas 7 - 10)
-    // ==========================================
-    {
-      'category': 'Psicotécnicas',
-      'question':
-          'Analiza la siguiente sucesión numérica y determina qué número continúa el patrón lógico: 3, 7, 15, 31, 63, ¿?',
-      'image': 'https://images.unsplash.com/photo-1648912024151-7bdb206b0547',
-      'options': ['127', '95', '125', '128'],
-      'correctAnswer': '127',
-    },
-    {
-      'category': 'Psicotécnicas',
-      'question':
-          'Una flecha apunta hacia el Norte (↑) en el Paso 1. Si gira 90° en sentido horario en cada paso (Paso 2 = Este →, Paso 3 = Sur ↓), ¿en qué dirección apuntará en el Paso 6?',
-      'image': 'https://images.unsplash.com/photo-1533073526757-2c8ca1df9f1c',
-      'options': ['Este (→)', 'Oeste (←)', 'Norte (↑)', 'Sur (↓)'],
-      'correctAnswer': 'Este (→)',
-    },
-    {
-      'category': 'Psicotécnicas',
-      'question':
-          'Completa la siguiente analogía verbal identificando la relación lógica: ALGORITMO es a PROBLEMA como DIAGNÓSTICO es a:',
-      'image': 'https://images.unsplash.com/photo-1648912024151-7bdb206b0547',
-      'options': [
-        'Enfermedad o condición clínica',
-        'Hospital',
-        'Medicamento',
-        'Ambulancia'
-      ],
-      'correctAnswer': 'Enfermedad o condición clínica',
-    },
-    {
-      'category': 'Psicotécnicas',
-      'question':
-          'Premisa 1: Todos los estudiantes de Ingeniería cursan Cálculo. Premisa 2: Todos los que cursan Cálculo utilizan pensamiento lógico. ¿Qué conclusión se deduce necesariamente?',
-      'image': 'https://images.unsplash.com/photo-1533073526757-2c8ca1df9f1c',
-      'options': [
-        'Todos los estudiantes de Ingeniería utilizan pensamiento lógico',
-        'Ningún estudiante de otras carreras utiliza pensamiento lógico',
-        'Solo quienes estudian Ingeniería cursan Cálculo',
-        'Algunas personas que cursan Cálculo no utilizan pensamiento lógico'
-      ],
-      'correctAnswer':
-          'Todos los estudiantes de Ingeniería utilizan pensamiento lógico',
-    },
-
-    // ==========================================
-    // 4. NIVEL DE ESTRATO (Preguntas 11 - 13)
-    // ==========================================
-    {
-      'category': 'Nivel de Estrato',
-      'question':
-          'En el sistema de estratificación socioeconómica vigente en Colombia (Ley 142 de 1994 y metodología DANE), ¿cuál es el propósito principal de clasificar las viviendas de Estrato 1 a 6?',
+      'question': '¿Qué base de datos es NoSQL?',
       'image': 'https://images.unsplash.com/photo-1451187580459-43490279c0fa',
-      'options': [
-        'Cobrar diferencialmente los servicios públicos domiciliarios, otorgando subsidios a los estratos 1, 2 y 3 y recaudando contribuciones en los estratos 5 y 6',
-        'Clasificar a los estudiantes según su promedio de notas en el colegio',
-        'Definir el número máximo de materias que puede inscribir un estudiante universitario',
-        'Asignar el código postal de acuerdo con la edad de los habitantes del hogar'
-      ],
-      'correctAnswer':
-          'Cobrar diferencialmente los servicios públicos domiciliarios, otorgando subsidios a los estratos 1, 2 y 3 y recaudando contribuciones en los estratos 5 y 6',
+      'options': ['MongoDB', 'PostgreSQL', 'MySQL', 'Oracle']
     },
     {
-      'category': 'Nivel de Estrato',
-      'question':
-          'Dentro de la escala de estratificación socioeconómica (Estratos 1 al 6), ¿qué estrato paga exactamente la tarifa plena (costo de referencia sin subsidio ni sobrecosto de contribución) en los servicios públicos?',
+      'question': '¿Qué técnica reduce redundancia en bases de datos?',
+      'image': 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d',
+      'options': ['Normalización', 'Replicación', 'Indexación', 'Hashing']
+    },
+    {
+      'question': '¿Qué lenguaje usa Flutter?',
+      'image': 'https://images.unsplash.com/photo-1517180102446-f3ece451e9d8',
+      'options': ['Dart', 'Kotlin', 'Swift', 'Python']
+    },
+    {
+      'question': '¿Qué HTTP method actualiza recursos?',
+      'image': 'https://images.unsplash.com/photo-1518770660439-4636190af475',
+      'options': ['PUT', 'GET', 'DELETE', 'OPTIONS']
+    },
+    {
+      'question': '¿Qué estructura sigue LIFO?',
+      'image': 'https://images.unsplash.com/photo-1516321497487-e288fb19713f',
+      'options': ['Pila', 'Cola', 'Árbol', 'Hash']
+    },
+    {
+      'question': '¿Qué servicio permite contenerización?',
+      'image': 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31',
+      'options': ['Docker', 'Git', 'Firebase', 'Linux']
+    },
+    {
+      'question': '¿Qué framework pertenece a Python?',
+      'image': 'https://images.unsplash.com/photo-1526379095098-d400fd0bf935',
+      'options': ['Django', 'Laravel', 'Spring', 'Express']
+    },
+    {
+      'question': '¿Qué principio evita modificar código existente?',
+      'image': 'https://images.unsplash.com/photo-1516110833967-214a2a0d3f5b',
+      'options': [
+        'Open/Closed',
+        'Single Responsibility',
+        'Interface Segregation',
+        'Liskov'
+      ]
+    },
+    {
+      'question': '¿Qué herramienta versiona código?',
+      'image': 'https://images.unsplash.com/photo-1556075798-4825dfaaf498',
+      'options': ['Git', 'Docker', 'Jira', 'Figma']
+    },
+    {
+      'question': '¿Qué arquitectura usa APIs REST?',
+      'image': 'https://images.unsplash.com/photo-1555949963-f6a0d0d5d9d8',
+      'options': ['Cliente-servidor', 'P2P', 'Mainframe', 'Monolito']
+    },
+    {
+      'question': '¿Qué lenguaje se ejecuta en navegador?',
+      'image': 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+      'options': ['JavaScript', 'Java', 'C#', 'Go']
+    },
+    {
+      'question': '¿Qué prueba mide rendimiento extremo?',
+      'image': 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+      'options': ['Estrés', 'Unitaria', 'Caja blanca', 'Aceptación']
+    },
+    {
+      'question': '¿Qué comando descarga dependencias Flutter?',
+      'image': 'https://images.unsplash.com/photo-1517180102446-f3ece451e9d8',
+      'options': [
+        'flutter pub get',
+        'flutter clean',
+        'flutter build',
+        'flutter create'
+      ]
+    },
+    {
+      'question': '¿Qué API maneja peticiones HTTP en Flutter?',
+      'image': 'https://images.unsplash.com/photo-1516321310764-8d4f1c2b0e0b',
+      'options': ['http', 'material', 'dart:ui', 'provider']
+    },
+    {
+      'question': '¿Qué estructura almacena pares clave-valor?',
+      'image': 'https://images.unsplash.com/photo-1526379095098-d400fd0bf935',
+      'options': ['Map', 'List', 'Queue', 'Stack']
+    },
+    {
+      'question': '¿Qué sistema usa integración continua?',
+      'image': 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31',
+      'options': ['CI/CD', 'FTP', 'SOAP', 'REST']
+    },
+    {
+      'question': '¿Qué método HTTP obtiene datos?',
+      'image': 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d',
+      'options': ['GET', 'POST', 'PATCH', 'DELETE']
+    },
+    {
+      'question': '¿Qué servicio despliega apps serverless?',
       'image': 'https://images.unsplash.com/photo-1451187580459-43490279c0fa',
+      'options': ['AWS Lambda', 'Docker', 'Kubernetes', 'Firebase Auth']
+    },
+    {
+      'question': '¿Qué tipo de IA aprende mediante ejemplos?',
+      'image': 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d',
+      'options': ['Machine Learning', 'Compilador', 'Árbol binario', 'Firewall']
+    },
+    {
+      'question': '¿Qué algoritmo ordena intercambiando elementos?',
+      'image': 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+      'options': ['Bubble Sort', 'Merge Sort', 'Quick Sort', 'Heap Sort']
+    },
+    {
+      'question': '¿Qué sistema administra contenedores?',
+      'image': 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31',
+      'options': ['Kubernetes', 'Git', 'Jira', 'Linux']
+    },
+    {
+      'question': '¿Qué componente Flutter crea layouts flexibles?',
+      'image': 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+      'options': ['Expanded', 'Scaffold', 'Text', 'AppBar']
+    },
+    {
+      'question': '¿Qué protocolo envía correos?',
+      'image': 'https://images.unsplash.com/photo-1516321497487-e288fb19713f',
+      'options': ['SMTP', 'FTP', 'HTTP', 'SSH']
+    },
+    {
+      'question': '¿Qué lenguaje compila JVM?',
+      'image': 'https://images.unsplash.com/photo-1517180102446-f3ece451e9d8',
+      'options': ['Java', 'Python', 'PHP', 'Go']
+    },
+    {
+      'question': '¿Qué propiedad CSS usa Flexbox?',
+      'image': 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
       'options': [
-        'Estrato 4 (Medio)',
-        'Estrato 1 (Bajo-bajo)',
-        'Estrato 2 (Bajo)',
-        'Estrato 6 (Alto)'
-      ],
-      'correctAnswer': 'Estrato 4 (Medio)',
+        'display:flex',
+        'position:absolute',
+        'float:left',
+        'grid-area'
+      ]
     },
     {
-      'category': 'Nivel de Estrato',
-      'question':
-          '¿Qué variables evalúa técnicamente el DANE para determinar el nivel de estrato socioeconómico de un sector residencial?',
-      'image': 'https://images.unsplash.com/photo-1522071820081-009f0129c71c',
-      'options': [
-        'Las características físicas externas de las viviendas, las vías de acceso y el entorno urbano del vecindario',
-        'Únicamente el historial académico de los integrantes de la familia',
-        'La marca de los dispositivos electrónicos dentro del hogar',
-        'La cantidad de libros almacenados en la vivienda'
-      ],
-      'correctAnswer':
-          'Las características físicas externas de las viviendas, las vías de acceso y el entorno urbano del vecindario',
-    },
-
-    // ==========================================
-    // 5. CIENCIAS EXACTAS: MATEMÁTICAS BÁSICA (Preguntas 14 - 17)
-    // ==========================================
-    {
-      'category': 'Ciencias Exactas: Matemáticas Básica',
-      'question':
-          'Una licencia de software educativo cuesta \$240.000 COP. Si la universidad otorga un descuento del 25% para estudiantes de primer semestre, ¿cuál es el valor final a pagar?',
-      'image': 'https://images.unsplash.com/photo-1509228468518-180dd4864904',
-      'options': [
-        '\$180.000 COP',
-        '\$190.000 COP',
-        '\$60.000 COP',
-        '\$215.000 COP'
-      ],
-      'correctAnswer': '\$180.000 COP',
+      'question': '¿Qué framework usa componentes reactivos?',
+      'image': 'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+      'options': ['React', 'Laravel', 'Spring', 'Django']
     },
     {
-      'category': 'Ciencias Exactas: Matemáticas Básica',
-      'question':
-          'Resuelve la siguiente ecuación lineal de primer grado y determina el valor exacto de x:  3x + 7 = 28',
-      'image': 'https://images.unsplash.com/photo-1509228468518-180dd4864904',
-      'options': ['x = 7', 'x = 9', 'x = 11', 'x = 6'],
-      'correctAnswer': 'x = 7',
+      'question': '¿Qué algoritmo usa prioridad?',
+      'image': 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+      'options': ['Dijkstra', 'Bubble Sort', 'DFS', 'BFS']
     },
     {
-      'category': 'Ciencias Exactas: Matemáticas Básica',
-      'question':
-          'En un triángulo rectángulo, los dos catetos perpendiculares miden 6 cm y 8 cm. Aplicando el Teorema de Pitágoras (c² = a² + b²), ¿cuánto mide la hipotenusa c?',
-      'image': 'https://images.unsplash.com/photo-1509228468518-180dd4864904',
-      'options': ['10 cm', '14 cm', '12 cm', '100 cm'],
-      'correctAnswer': '10 cm',
+      'question': '¿Qué tipo de relación SQL conecta tablas?',
+      'image': 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d',
+      'options': ['JOIN', 'DROP', 'INSERT', 'UPDATE']
     },
     {
-      'category': 'Ciencias Exactas: Matemáticas Básica',
-      'question':
-          'Si un servidor procesa 150 solicitudes académicas en 3 minutos a ritmo constante, ¿cuántas solicitudes procesará en 8 minutos?',
-      'image': 'https://images.unsplash.com/photo-1509228468518-180dd4864904',
-      'options': [
-        '400 solicitudes',
-        '350 solicitudes',
-        '450 solicitudes',
-        '240 solicitudes'
-      ],
-      'correctAnswer': '400 solicitudes',
-    },
-
-    // ==========================================
-    // 6. CIENCIAS EXACTAS: FÍSICA BÁSICA (Preguntas 18 - 20)
-    // ==========================================
-    {
-      'category': 'Ciencias Exactas: Física Básica',
-      'question':
-          'Un tren eléctrico se desplaza en línea recta con velocidad constante y recorre 180 kilómetros en 2 horas. ¿Cuál es su rapidez media en km/h y su equivalente en m/s?',
-      'image': 'https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa',
-      'options': [
-        '90 km/h (equivalente a 25 m/s)',
-        '360 km/h (equivalente a 100 m/s)',
-        '60 km/h (equivalente a 16,6 m/s)',
-        '90 km/h (equivalente a 90 m/s)'
-      ],
-      'correctAnswer': '90 km/h (equivalente a 25 m/s)',
-    },
-    {
-      'category': 'Ciencias Exactas: Física Básica',
-      'question':
-          'Sobre un bloque de masa m = 12 kg en una superficie sin fricción se aplica una fuerza neta horizontal F = 60 N. Según la Segunda Ley de Newton (F = m · a), ¿qué aceleración adquiere?',
-      'image': 'https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa',
-      'options': ['5 m/s²', '720 m/s²', '0,2 m/s²', '48 m/s²'],
-      'correctAnswer': '5 m/s²',
-    },
-    {
-      'category': 'Ciencias Exactas: Física Básica',
-      'question':
-          'Una esfera de masa m = 2 kg se sostiene a una altura h = 10 m sobre el suelo (g = 10 m/s²). ¿Cuál es su energía potencial gravitatoria inicial (Ep = m · g · h)?',
-      'image': 'https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa',
-      'options': [
-        '200 Joules (J)',
-        '20 Joules (J)',
-        '100 Joules (J)',
-        '400 Joules (J)'
-      ],
-      'correctAnswer': '200 Joules (J)',
+      'question': '¿Qué sistema autentica usuarios?',
+      'image': 'https://images.unsplash.com/photo-1563013544-824ae1b704d3',
+      'options': ['OAuth', 'REST', 'FTP', 'SOAP']
     },
   ];
 
@@ -311,6 +270,7 @@ class _ExamScreenState extends State<ExamScreen> {
 
   String formatTime(int seconds) {
     int minutes = seconds ~/ 60;
+
     int remainingSeconds = seconds % 60;
 
     return '${minutes.toString().padLeft(2, '0')}:'
@@ -320,346 +280,445 @@ class _ExamScreenState extends State<ExamScreen> {
   @override
   void dispose() {
     timer?.cancel();
+
     super.dispose();
   }
 
-  void nextQuestion() {
-    if (currentQuestion < questions.length - 1) {
-      setState(() {
-        currentQuestion++;
-      });
-    }
-  }
-
-  void previousQuestion() {
-    if (currentQuestion > 0) {
-      setState(() {
-        currentQuestion--;
-      });
-    }
-  }
-
-  void selectAnswer(String option) {
-    setState(() {
-      selectedAnswers[currentQuestion] = option;
-    });
-  }
-
-  void finishExam() {
-    timer?.cancel();
-
-    int correct = 0;
-    for (int i = 0; i < questions.length; i++) {
-      final expected =
-          questions[i]['correctAnswer'] ?? questions[i]['options'][0];
-      if (selectedAnswers[i] == expected) {
-        correct++;
-      }
-    }
-
-    double score = (correct / questions.length) * 5.0;
-
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(
-        builder: (context) => ResultScreen(
-          score: score,
-          totalQuestions: questions.length,
-          correctAnswers: correct,
-        ),
-      ),
-    );
-  }
+  final Color darkBlue = const Color(0xFF06142E);
+  final Color green = const Color(0xFF0F8B5F);
 
   @override
   Widget build(BuildContext context) {
     final question = questions[currentQuestion];
-    final progress = (currentQuestion + 1) / questions.length;
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF4F6FA),
-      appBar: AppBar(
-        title: const Text('Evaluación de Conocimientos Básicos'),
-        backgroundColor: const Color(0xFF0F172A),
-        foregroundColor: Colors.white,
-        centerTitle: true,
-      ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Card(
-                elevation: 2,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Row(
+      backgroundColor: const Color(0xFFF4F7FB),
+      body: Row(
+        children: [
+          /// SIDEBAR
+          Container(
+            width: 300,
+            color: darkBlue,
+            child: Padding(
+              padding: const EdgeInsets.all(28),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(height: 30),
+
+                  const Text(
+                    'UniTest',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 34,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+
+                  const SizedBox(height: 40),
+
+                  /// TIMER
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.all(25),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.08),
+                      borderRadius: BorderRadius.circular(24),
+                    ),
+                    child: Column(
+                      children: [
+                        const Icon(
+                          Icons.timer,
+                          color: Colors.white,
+                          size: 40,
+                        ),
+                        const SizedBox(height: 18),
+                        Text(
+                          formatTime(timeLeft),
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 38,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 10),
+                        const Text(
+                          'Tiempo restante',
+                          style: TextStyle(
+                            color: Colors.white70,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  const SizedBox(height: 35),
+
+                  const Text(
+                    'Preguntas',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+
+                  const SizedBox(height: 20),
+
+                  Expanded(
+                    child: GridView.builder(
+                      itemCount: questions.length,
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 4,
+                        crossAxisSpacing: 12,
+                        mainAxisSpacing: 12,
+                      ),
+                      itemBuilder: (_, index) {
+                        final active = currentQuestion == index;
+
+                        return GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              currentQuestion = index;
+                            });
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: active
+                                  ? green
+                                  : Colors.white.withOpacity(0.08),
+                              borderRadius: BorderRadius.circular(18),
+                            ),
+                            child: Center(
+                              child: Text(
+                                '${index + 1}',
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+
+                  const SizedBox(height: 20),
+
+                  SizedBox(
+                    width: double.infinity,
+                    height: 60,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.red,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18),
+                        ),
+                      ),
+                      onPressed: () {
+                        timer?.cancel();
+
+                        int score = 0;
+
+                        final correctAnswers = {
+                          0: 'Microservicios',
+                          1: 'Array ordenado',
+                          2: 'Secuencia',
+                          3: 'DISTINCT',
+                          4: 'Observer',
+                          5: 'Scrum',
+                          6: 'Dependency Inversion',
+                          7: 'TLS/SSL',
+                          8: 'Búsqueda binaria',
+                          9: 'Navigator',
+                          10: 'Unitarias',
+                          11: 'MongoDB',
+                          12: 'Normalización',
+                          13: 'Dart',
+                          14: 'PUT',
+                          15: 'Pila',
+                          16: 'Docker',
+                          17: 'Django',
+                          18: 'Open/Closed',
+                          19: 'Git',
+                          20: 'Cliente-servidor',
+                          21: 'JavaScript',
+                          22: 'Estrés',
+                          23: 'flutter pub get',
+                          24: 'http',
+                          25: 'Map',
+                          26: 'CI/CD',
+                          27: 'GET',
+                          28: 'AWS Lambda',
+                          29: 'Machine Learning',
+                          30: 'Bubble Sort',
+                          31: 'Kubernetes',
+                          32: 'Expanded',
+                          33: 'SMTP',
+                          34: 'Java',
+                          35: 'display:flex',
+                          36: 'React',
+                          37: 'Dijkstra',
+                          38: 'JOIN',
+                          39: 'OAuth',
+                        };
+
+                        selectedAnswers.forEach((key, value) {
+                          if (correctAnswers[key] == value) {
+                            score++;
+                          }
+                        });
+
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => ResultScreen(
+                              score: score,
+                              total: questions.length,
+                            ),
+                          ),
+                        );
+                      },
+                      child: const Text(
+                        'Enviar Examen',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+
+          /// CONTENT
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(40),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Pregunta ${currentQuestion + 1} de ${questions.length}',
+                            'Pregunta ${currentQuestion + 1}',
                             style: const TextStyle(
-                              fontSize: 16,
+                              fontSize: 42,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          const SizedBox(height: 4),
+                          const SizedBox(height: 8),
                           Text(
-                            'Módulo: ${question['category'] ?? 'General'} • Avance: ${(progress * 100).toInt()}%',
+                            'Evaluación de Ingeniería de Software',
                             style: TextStyle(
-                              color: Colors.grey[600],
-                              fontSize: 13,
+                              color: Colors.grey.shade600,
+                              fontSize: 18,
                             ),
                           ),
                         ],
                       ),
                       Container(
                         padding: const EdgeInsets.symmetric(
-                          horizontal: 14,
-                          vertical: 8,
+                          horizontal: 22,
+                          vertical: 16,
                         ),
                         decoration: BoxDecoration(
-                          color: const Color(0xFF0F172A),
-                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(18),
                         ),
-                        child: Row(
-                          children: [
-                            const Icon(
-                              Icons.timer,
-                              color: Colors.white,
-                              size: 18,
+                        child: Text(
+                          '${currentQuestion + 1}/${questions.length}',
+                          style: const TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 35),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: LinearProgressIndicator(
+                      value: (currentQuestion + 1) / questions.length,
+                      minHeight: 12,
+                      backgroundColor: Colors.grey.shade300,
+                      color: green,
+                    ),
+                  ),
+                  const SizedBox(height: 40),
+                  Expanded(
+                    child: SingleChildScrollView(
+                      child: Container(
+                        width: double.infinity,
+                        padding: const EdgeInsets.all(40),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(35),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.04),
+                              blurRadius: 20,
                             ),
-                            const SizedBox(width: 6),
+                          ],
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
                             Text(
-                              formatTime(timeLeft),
+                              question['question'],
                               style: const TextStyle(
-                                color: Colors.white,
+                                fontSize: 30,
                                 fontWeight: FontWeight.bold,
+                                height: 1.4,
                               ),
+                            ),
+                            const SizedBox(height: 35),
+                            Container(
+                              height: 260,
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(24),
+                              ),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(24),
+                                child: Image.network(
+                                  question['image'],
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                            const SizedBox(height: 35),
+                            ...List.generate(
+                              question['options'].length,
+                              (index) {
+                                final option = question['options'][index];
+
+                                final selected =
+                                    selectedAnswers[currentQuestion] == option;
+
+                                return GestureDetector(
+                                  onTap: () {
+                                    setState(() {
+                                      selectedAnswers[currentQuestion] = option;
+                                    });
+                                  },
+                                  child: Container(
+                                    margin: const EdgeInsets.only(
+                                      bottom: 18,
+                                    ),
+                                    padding: const EdgeInsets.all(24),
+                                    decoration: BoxDecoration(
+                                      color: selected
+                                          ? green.withOpacity(0.08)
+                                          : const Color(0xFFF4F7FB),
+                                      borderRadius: BorderRadius.circular(20),
+                                      border: Border.all(
+                                        color: selected
+                                            ? green
+                                            : Colors.transparent,
+                                        width: 2,
+                                      ),
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        CircleAvatar(
+                                          radius: 20,
+                                          backgroundColor: selected
+                                              ? green
+                                              : Colors.grey.shade300,
+                                          child: Text(
+                                            String.fromCharCode(
+                                              65 + index,
+                                            ),
+                                            style: TextStyle(
+                                              color: selected
+                                                  ? Colors.white
+                                                  : Colors.black,
+                                            ),
+                                          ),
+                                        ),
+                                        const SizedBox(width: 20),
+                                        Expanded(
+                                          child: Text(
+                                            option,
+                                            style: const TextStyle(
+                                              fontSize: 18,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                            const SizedBox(height: 20),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                OutlinedButton(
+                                  style: OutlinedButton.styleFrom(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 30,
+                                      vertical: 20,
+                                    ),
+                                  ),
+                                  onPressed: () {
+                                    if (currentQuestion > 0) {
+                                      setState(() {
+                                        currentQuestion--;
+                                      });
+                                    }
+                                  },
+                                  child: const Text(
+                                    'Anterior',
+                                  ),
+                                ),
+                                ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: green,
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 35,
+                                      vertical: 20,
+                                    ),
+                                  ),
+                                  onPressed: () {
+                                    if (currentQuestion <
+                                        questions.length - 1) {
+                                      setState(() {
+                                        currentQuestion++;
+                                      });
+                                    }
+                                  },
+                                  child: const Text(
+                                    'Siguiente',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
                       ),
-                    ],
-                  ),
-                ),
-              ),
-
-              const SizedBox(height: 16),
-
-              ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: LinearProgressIndicator(
-                  value: progress,
-                  minHeight: 10,
-                  backgroundColor: Colors.grey[300],
-                  valueColor: const AlwaysStoppedAnimation<Color>(
-                    Color(0xFF2563EB),
-                  ),
-                ),
-              ),
-
-              const SizedBox(height: 20),
-
-              Card(
-                elevation: 3,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Column(
-                    children: [
-                      if (question['category'] != null)
-                        Container(
-                          margin: const EdgeInsets.only(bottom: 12),
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 12,
-                            vertical: 6,
-                          ),
-                          decoration: BoxDecoration(
-                            color: const Color(0xFF2563EB).withOpacity(0.1),
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: Text(
-                            question['category'],
-                            style: const TextStyle(
-                              color: Color(0xFF2563EB),
-                              fontWeight: FontWeight.bold,
-                              fontSize: 13,
-                            ),
-                          ),
-                        ),
-
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(12),
-                        child: Image.network(
-                          question['image'],
-                          height: 180,
-                          width: double.infinity,
-                          fit: BoxFit.cover,
-                          errorBuilder: (context, error, stackTrace) {
-                            return Container(
-                              height: 180,
-                              color: Colors.grey[300],
-                              child: const Icon(
-                                Icons.image,
-                                size: 50,
-                                color: Colors.grey,
-                              ),
-                            );
-                          },
-                        ),
-                      ),
-
-                      const SizedBox(height: 20),
-
-                      Text(
-                        question['question'],
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF0F172A),
-                        ),
-                      ),
-
-                      const SizedBox(height: 20),
-
-                      ...List.generate(
-                        question['options'].length,
-                        (index) {
-                          String option = question['options'][index];
-                          bool isSelected =
-                              selectedAnswers[currentQuestion] == option;
-
-                          return Container(
-                            margin: const EdgeInsets.only(bottom: 12),
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: isSelected
-                                    ? const Color(0xFF2563EB)
-                                    : Colors.white,
-                                foregroundColor: isSelected
-                                    ? Colors.white
-                                    : const Color(0xFF0F172A),
-                                side: BorderSide(
-                                  color: isSelected
-                                      ? const Color(0xFF2563EB)
-                                      : Colors.grey[300]!,
-                                  width: 1.5,
-                                ),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(12),
-                                ),
-                                padding: const EdgeInsets.symmetric(
-                                  vertical: 14,
-                                  horizontal: 16,
-                                ),
-                                alignment: Alignment.centerLeft,
-                              ),
-                              onPressed: () => selectAnswer(option),
-                              child: Row(
-                                children: [
-                                  CircleAvatar(
-                                    radius: 14,
-                                    backgroundColor: isSelected
-                                        ? Colors.white
-                                        : Colors.grey[200],
-                                    child: Text(
-                                      String.fromCharCode(65 + index),
-                                      style: TextStyle(
-                                        color: isSelected
-                                            ? const Color(0xFF2563EB)
-                                            : Colors.grey[700],
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(width: 12),
-                                  Expanded(
-                                    child: Text(
-                                      option,
-                                      style: const TextStyle(
-                                        fontSize: 15,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          );
-                        },
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-
-              const SizedBox(height: 20),
-
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  ElevatedButton.icon(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.grey[300],
-                      foregroundColor: const Color(0xFF0F172A),
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 20,
-                        vertical: 12,
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                    ),
-                    onPressed:
-                        currentQuestion > 0 ? previousQuestion : null,
-                    icon: const Icon(Icons.arrow_back),
-                    label: const Text('Anterior'),
-                  ),
-
-                  ElevatedButton.icon(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor:
-                          currentQuestion == questions.length - 1
-                              ? Colors.green
-                              : const Color(0xFF2563EB),
-                      foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 20,
-                        vertical: 12,
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                    ),
-                    onPressed: currentQuestion == questions.length - 1
-                        ? finishExam
-                        : nextQuestion,
-                    icon: Icon(
-                      currentQuestion == questions.length - 1
-                          ? Icons.check_circle
-                          : Icons.arrow_forward,
-                    ),
-                    label: Text(
-                      currentQuestion == questions.length - 1
-                          ? 'Finalizar'
-                          : 'Siguiente',
                     ),
                   ),
                 ],
               ),
-            ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }
