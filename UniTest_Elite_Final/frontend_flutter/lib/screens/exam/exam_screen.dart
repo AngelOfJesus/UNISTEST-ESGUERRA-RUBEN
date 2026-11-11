@@ -21,9 +21,9 @@ class _ExamScreenState extends State<ExamScreen> {
   final List<Map<String, dynamic>> questions = [
     {
       'question':
-          '¿Qué arquitectura es más adecuada para sistemas distribuidos escalables?',
+          '¿En una secuencia numérica, cada término se obtiene multiplicando el anterior por 2 y sumando 1. Si comienza en 2, ¿cuál es el cuarto término?',
       'image': 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
-      'options': ['Microservicios', 'Monolito', 'MVC', 'Cliente-servidor']
+      'options': ['19', '21', '23', '25']
     },
     {
       'question': '¿Qué estructura optimiza búsquedas binarias?',
