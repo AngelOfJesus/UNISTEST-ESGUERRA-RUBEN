@@ -19,206 +19,273 @@ class _ExamScreenState extends State<ExamScreen> {
   Map<int, String> selectedAnswers = {};
 
   final List<Map<String, dynamic>> questions = [
+    // ==========================================
+    // 1. PRUEBAS PSICOLÓGICAS (Preguntas 1 - 3)
+    // ==========================================
     {
-      'question': 'En una secuencia numérica, cada término se obtiene multiplicando el anterior por 2 y sumando 1. Si comienza en 2, ¿cuál es el cuarto término?',
-      'image': 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
-      'options': ['19', '21', '23', '25']
-    },
-    {
-      'question': 'Un estudiante observa que una planta crece más con cierta cantidad de luz. ¿Qué debería hacer para comprobar si la luz es la causa?',
-      'image': 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
-      'options': ['Cambiar luz, agua y suelo al mismo tiempo', 'Repetir el experimento controlando las demás variables', 'Medir una sola planta una vez', 'Aceptar la primera observación como prueba']
-    },
-    {
-      'question': 'Completa la analogía: brújula es a orientación como termómetro es a…',
-      'image': 'https://images.unsplash.com/photo-1555949963-aa79dcee981c',
-      'options': ['Velocidad', 'Presión', 'Temperatura', 'Distancia']
-    },
-    {
-      'question': 'Si todos los prototipos del lote A fueron revisados y algunos dispositivos revisados fallaron, ¿qué conclusión es necesariamente válida?',
-      'image': 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d',
-      'options': ['Todos los prototipos del lote A fallaron', 'Ningún prototipo del lote A falló', 'No se puede afirmar que un prototipo del lote A haya fallado', 'Todos los dispositivos revisados pertenecen al lote A']
-    },
-    {
-      'question': 'Una máquina produce 6 piezas en 4 minutos. Manteniendo el mismo ritmo, ¿cuántas piezas produce en 20 minutos?',
-      'image': 'https://images.unsplash.com/photo-1516321497487-e288fb19713f',
-      'options': ['24', '26', '30', '36']
-    },
-    {
-      'question': 'En una fila, Laura está antes que Mateo y Mateo antes que Sara. ¿Cuál afirmación es correcta?',
+      'category': 'Pruebas Psicológicas',
+      'question':
+          'Durante la entrega final de un proyecto grupal, un integrante informa a última hora que no completó su parte. ¿Cuál es la respuesta psicológicamente más adaptativa y asertiva?',
       'image': 'https://images.unsplash.com/photo-1522071820081-009f0129c71c',
-      'options': ['Sara está antes que Laura', 'Mateo está antes que Laura', 'Laura está antes que Sara', 'No se puede establecer el orden']
+      'options': [
+        'Reorganizar de inmediato las tareas prioritarias con el equipo y establecer acuerdos claros sin atacar personalmente al compañero',
+        'Excluir al compañero sin dialogar y asumir todo el trabajo restante en silencio',
+        'Suspender la entrega del proyecto hasta que el compañero resuelva su parte solo',
+        'Exponer el conflicto de forma agresiva antes de buscar una solución práctica'
+      ],
+      'correctAnswer':
+          'Reorganizar de inmediato las tareas prioritarias con el equipo y establecer acuerdos claros sin atacar personalmente al compañero',
     },
     {
-      'question': 'Un problema tiene cinco posibles soluciones. Después de probar tres, todas fallan por la misma razón. ¿Qué estrategia es más razonable?',
-      'image': 'https://images.unsplash.com/photo-1516116216624-53e697fedbea',
-      'options': ['Seguir probando al azar', 'Analizar la causa común y descartar enfoques equivalentes', 'Elegir la primera solución', 'Abandonar sin revisar los datos']
+      'category': 'Pruebas Psicológicas',
+      'question':
+          'Si obtienes una calificación inferior a la esperada en una prueba diagnóstica universitaria, ¿qué pensamiento refleja un locus de control interno saludable?',
+      'image': 'https://images.unsplash.com/photo-1557672186-269926e526c1',
+      'options': [
+        'Identificar qué temas específicos fallaron y ajustar mi método de estudio para la siguiente evaluación',
+        'Asumir que las pruebas están diseñadas para reprobar y que el esfuerzo propio no influye',
+        'Abandonar la asignatura de inmediato pensando que no tengo aptitud para el estudio',
+        'Atribuir el resultado únicamente a la mala suerte sin revisar la retroalimentación'
+      ],
+      'correctAnswer':
+          'Identificar qué temas específicos fallaron y ajustar mi método de estudio para la siguiente evaluación',
     },
     {
-      'question': '¿Qué número continúa la serie: 3, 6, 11, 18, 27, …?',
-      'image': 'https://images.unsplash.com/photo-1563013544-824ae1b704d3',
-      'options': ['34', '36', '38', '40']
+      'category': 'Pruebas Psicológicas',
+      'question':
+          'Cuando te enfrentas a un problema académico complejo cuya solución no aparece en el primer intento, ¿qué conducta demuestra alta tolerancia a la frustración?',
+      'image': 'https://images.unsplash.com/photo-1533073526757-2c8ca1df9f1c',
+      'options': [
+        'Dividir el problema en partes más pequeñas, analizar qué falló y probar una hipótesis alternativa',
+        'Repetir exactamente el mismo procedimiento fallido esperando un resultado distinto',
+        'Renunciar a la tarea en los primeros minutos por considerarla imposible',
+        'Culpar a las herramientas de trabajo sin revisar el planteamiento inicial'
+      ],
+      'correctAnswer':
+          'Dividir el problema en partes más pequeñas, analizar qué falló y probar una hipótesis alternativa',
+    },
+
+    // ==========================================
+    // 2. PSICOANALÍTICA (Preguntas 4 - 6)
+    // ==========================================
+    {
+      'category': 'Psicoanalítica',
+      'question':
+          'Desde la perspectiva psicoanalítica de los mecanismos de defensa del Yo, ¿cuál de las siguientes situaciones ejemplifica el mecanismo maduro de la sublimación?',
+      'image': 'https://images.unsplash.com/photo-1620802421041-cfb402036374',
+      'options': [
+        'Canalizar un estado de alta tensión emocional hacia la investigación científica, el arte o el estudio disciplinado',
+        'Atribuir a los compañeros de clase los propios sentimientos de inseguridad (proyección)',
+        'Negar que existe un examen programado para la semana siguiente (negación)',
+        'Adoptar conductas infantiles cuando una tarea resulta exigente (regresión)'
+      ],
+      'correctAnswer':
+          'Canalizar un estado de alta tensión emocional hacia la investigación científica, el arte o el estudio disciplinado',
     },
     {
-      'question': '¿Cuál de las siguientes magnitudes es una magnitud fundamental del Sistema Internacional?',
-      'image': 'https://images.unsplash.com/photo-1516321165247-4aa89a48be28',
-      'options': ['Fuerza', 'Energía', 'Masa', 'Presión']
+      'category': 'Psicoanalítica',
+      'question':
+          'En el modelo estructural del aparato psíquico (Ello, Yo y Superyó), ¿qué función cumple el Yo (principio de realidad) frente a una decisión académica exigente?',
+      'image': 'https://images.unsplash.com/photo-1557672186-269926e526c1',
+      'options': [
+        'Mediar de forma consciente y realista entre los impulsos inmediatos y las normas éticas para tomar una decisión responsable',
+        'Buscar únicamente la gratificación instantánea evitando cualquier esfuerzo intelectual',
+        'Generar culpa paralizante ante cualquier error mínimo sin permitir el aprendizaje',
+        'Suprimir toda reflexión consciente y actuar por impulso automático'
+      ],
+      'correctAnswer':
+          'Mediar de forma consciente y realista entre los impulsos inmediatos y las normas éticas para tomar una decisión responsable',
     },
     {
-      'question': 'En un experimento, se modifica la temperatura y se mide cuánto tarda en disolverse una sustancia. ¿Cuál es la variable independiente?',
-      'image': 'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
-      'options': ['El tiempo de disolución', 'La temperatura', 'La cantidad disuelta', 'El resultado final']
+      'category': 'Psicoanalítica',
+      'question':
+          'En una prueba proyectiva e introspectiva, ¿qué actitud evidencia madurez reflexiva e integración perceptual al analizar una situación ambigua?',
+      'image': 'https://images.unsplash.com/photo-1620802421041-cfb402036374',
+      'options': [
+        'Integrar el contexto global con los detalles específicos, reconociendo emociones propias antes de emitir un juicio',
+        'Bloquearse por completo y negarse a analizar la situación por temor al error',
+        'Fijarse únicamente en un detalle aislado ignorando por completo el contexto general',
+        'Imponer una interpretación rígida sin escuchar otras perspectivas posibles'
+      ],
+      'correctAnswer':
+          'Integrar el contexto global con los detalles específicos, reconociendo emociones propias antes de emitir un juicio',
+    },
+
+    // ==========================================
+    // 3. PSICOTÉCNICAS (Preguntas 7 - 10)
+    // ==========================================
+    {
+      'category': 'Psicotécnicas',
+      'question':
+          'Analiza la siguiente sucesión numérica y determina qué número continúa el patrón lógico: 3, 7, 15, 31, 63, ¿?',
+      'image': 'https://images.unsplash.com/photo-1648912024151-7bdb206b0547',
+      'options': ['127', '95', '125', '128'],
+      'correctAnswer': '127',
     },
     {
-      'question': '¿Qué instrumento es el más adecuado para medir el diámetro de una pieza pequeña con precisión?',
-      'image': 'https://images.unsplash.com/photo-1516321310764-8d4f1c2b0e0b',
-      'options': ['Cronómetro', 'Balanza', 'Calibrador o pie de rey', 'Termómetro']
+      'category': 'Psicotécnicas',
+      'question':
+          'Una flecha apunta hacia el Norte (↑) en el Paso 1. Si gira 90° en sentido horario en cada paso (Paso 2 = Este →, Paso 3 = Sur ↓), ¿en qué dirección apuntará en el Paso 6?',
+      'image': 'https://images.unsplash.com/photo-1533073526757-2c8ca1df9f1c',
+      'options': ['Este (→)', 'Oeste (←)', 'Norte (↑)', 'Sur (↓)'],
+      'correctAnswer': 'Este (→)',
     },
     {
-      'question': 'Una sustancia tiene masa de 200 g y ocupa 50 cm³. ¿Cuál es su densidad?',
+      'category': 'Psicotécnicas',
+      'question':
+          'Completa la siguiente analogía verbal identificando la relación lógica: ALGORITMO es a PROBLEMA como DIAGNÓSTICO es a:',
+      'image': 'https://images.unsplash.com/photo-1648912024151-7bdb206b0547',
+      'options': [
+        'Enfermedad o condición clínica',
+        'Hospital',
+        'Medicamento',
+        'Ambulancia'
+      ],
+      'correctAnswer': 'Enfermedad o condición clínica',
+    },
+    {
+      'category': 'Psicotécnicas',
+      'question':
+          'Premisa 1: Todos los estudiantes de Ingeniería cursan Cálculo. Premisa 2: Todos los que cursan Cálculo utilizan pensamiento lógico. ¿Qué conclusión se deduce necesariamente?',
+      'image': 'https://images.unsplash.com/photo-1533073526757-2c8ca1df9f1c',
+      'options': [
+        'Todos los estudiantes de Ingeniería utilizan pensamiento lógico',
+        'Ningún estudiante de otras carreras utiliza pensamiento lógico',
+        'Solo quienes estudian Ingeniería cursan Cálculo',
+        'Algunas personas que cursan Cálculo no utilizan pensamiento lógico'
+      ],
+      'correctAnswer':
+          'Todos los estudiantes de Ingeniería utilizan pensamiento lógico',
+    },
+
+    // ==========================================
+    // 4. NIVEL DE ESTRATO (Preguntas 11 - 13)
+    // ==========================================
+    {
+      'category': 'Nivel de Estrato',
+      'question':
+          'En el sistema de estratificación socioeconómica vigente en Colombia (Ley 142 de 1994 y metodología DANE), ¿cuál es el propósito principal de clasificar las viviendas de Estrato 1 a 6?',
       'image': 'https://images.unsplash.com/photo-1451187580459-43490279c0fa',
-      'options': ['2 g/cm³', '4 g/cm³', '5 g/cm³', '10 g/cm³']
+      'options': [
+        'Cobrar diferencialmente los servicios públicos domiciliarios, otorgando subsidios a los estratos 1, 2 y 3 y recaudando contribuciones en los estratos 5 y 6',
+        'Clasificar a los estudiantes según su promedio de notas en el colegio',
+        'Definir el número máximo de materias que puede inscribir un estudiante universitario',
+        'Asignar el código postal de acuerdo con la edad de los habitantes del hogar'
+      ],
+      'correctAnswer':
+          'Cobrar diferencialmente los servicios públicos domiciliarios, otorgando subsidios a los estratos 1, 2 y 3 y recaudando contribuciones en los estratos 5 y 6',
     },
     {
-      'question': '¿Qué representa una hipótesis científica?',
-      'image': 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d',
-      'options': ['Una opinión imposible de comprobar', 'Una explicación provisional que puede ponerse a prueba', 'Una conclusión que nunca cambia', 'Una observación sin relación con el problema']
-    },
-    {
-      'question': 'Si un objeto está formado por partículas y se calienta, normalmente sus partículas…',
-      'image': 'https://images.unsplash.com/photo-1517180102446-f3ece451e9d8',
-      'options': ['Dejan de moverse', 'Disminuyen siempre su tamaño', 'Aumentan su energía cinética promedio', 'Se convierten automáticamente en otro elemento']
-    },
-    {
-      'question': '¿Cuál es la unidad de corriente eléctrica en el Sistema Internacional?',
-      'image': 'https://images.unsplash.com/photo-1518770660439-4636190af475',
-      'options': ['Voltio', 'Ohmio', 'Amperio', 'Vatio']
-    },
-    {
-      'question': 'En una gráfica de distancia contra tiempo, una línea recta con pendiente constante distinta de cero representa…',
-      'image': 'https://images.unsplash.com/photo-1516321497487-e288fb19713f',
-      'options': ['Movimiento con velocidad constante', 'Reposo', 'Aceleración que aumenta continuamente', 'Cambio aleatorio de dirección']
-    },
-    {
-      'question': '¿Cuánto es el 15 % de 240?',
-      'image': 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31',
-      'options': ['24', '30', '36', '40']
-    },
-    {
-      'question': 'Resuelve: 3(2x − 1) = 15.',
-      'image': 'https://images.unsplash.com/photo-1526379095098-d400fd0bf935',
-      'options': ['x = 2', 'x = 3', 'x = 4', 'x = 6']
-    },
-    {
-      'question': 'Una chaqueta cuesta $80.000 y tiene un descuento del 25 %. ¿Cuál es el precio final?',
-      'image': 'https://images.unsplash.com/photo-1516110833967-214a2a0d3f5b',
-      'options': ['$55.000', '$60.000', '$65.000', '$75.000']
-    },
-    {
-      'question': '¿Cuál es el resultado de 2/3 + 1/6?',
-      'image': 'https://images.unsplash.com/photo-1556075798-4825dfaaf498',
-      'options': ['1/2', '2/9', '5/6', '1']
-    },
-    {
-      'question': 'Un terreno rectangular mide 12 m de largo y 7 m de ancho. ¿Cuál es su área?',
-      'image': 'https://images.unsplash.com/photo-1555949963-f6a0d0d5d9d8',
-      'options': ['19 m²', '38 m²', '84 m²', '168 m²']
-    },
-    {
-      'question': 'Si f(x) = 2x² − 3, ¿cuánto vale f(3)?',
-      'image': 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
-      'options': ['9', '12', '15', '18']
-    },
-    {
-      'question': 'Un automóvil recorre 150 km en 2,5 horas a velocidad constante. ¿Cuál es su velocidad promedio?',
-      'image': 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
-      'options': ['50 km/h', '55 km/h', '60 km/h', '75 km/h']
-    },
-    {
-      'question': 'En un grupo hay 18 mujeres y 12 hombres. ¿Qué fracción del grupo corresponde a los hombres?',
-      'image': 'https://images.unsplash.com/photo-1517180102446-f3ece451e9d8',
-      'options': ['2/5', '3/5', '2/3', '3/2']
-    },
-    {
-      'question': 'Un objeto de 4 kg acelera a 3 m/s². Según la segunda ley de Newton, ¿qué fuerza neta actúa sobre él?',
-      'image': 'https://images.unsplash.com/photo-1516321310764-8d4f1c2b0e0b',
-      'options': ['7 N', '12 N', '16 N', '24 N']
-    },
-    {
-      'question': 'Se deja caer una pelota desde cierta altura, despreciando la resistencia del aire. Durante la caída, su energía potencial gravitatoria…',
-      'image': 'https://images.unsplash.com/photo-1526379095098-d400fd0bf935',
-      'options': ['Aumenta', 'Disminuye', 'Permanece siempre igual', 'Se convierte en masa']
-    },
-    {
-      'question': '¿Cuál es la unidad de energía en el Sistema Internacional?',
-      'image': 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31',
-      'options': ['Newton', 'Pascal', 'Joule', 'Amperio']
-    },
-    {
-      'question': 'Una resistencia de 6 Ω se conecta a una fuente de 12 V. ¿Qué corriente circula por ella?',
-      'image': 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d',
-      'options': ['0,5 A', '2 A', '6 A', '72 A']
-    },
-    {
-      'question': '¿Qué sucede con la presión sobre una superficie si se aplica la misma fuerza sobre un área menor?',
+      'category': 'Nivel de Estrato',
+      'question':
+          'Dentro de la escala de estratificación socioeconómica (Estratos 1 al 6), ¿qué estrato paga exactamente la tarifa plena (costo de referencia sin subsidio ni sobrecosto de contribución) en los servicios públicos?',
       'image': 'https://images.unsplash.com/photo-1451187580459-43490279c0fa',
-      'options': ['Disminuye', 'Aumenta', 'No cambia', 'Se vuelve cero']
+      'options': [
+        'Estrato 4 (Medio)',
+        'Estrato 1 (Bajo-bajo)',
+        'Estrato 2 (Bajo)',
+        'Estrato 6 (Alto)'
+      ],
+      'correctAnswer': 'Estrato 4 (Medio)',
     },
     {
-      'question': 'Un ciclista pasa de 4 m/s a 10 m/s en 3 segundos. ¿Cuál es su aceleración media?',
-      'image': 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d',
-      'options': ['2 m/s²', '3 m/s²', '4 m/s²', '6 m/s²']
+      'category': 'Nivel de Estrato',
+      'question':
+          '¿Qué variables evalúa técnicamente el DANE para determinar el nivel de estrato socioeconómico de un sector residencial?',
+      'image': 'https://images.unsplash.com/photo-1522071820081-009f0129c71c',
+      'options': [
+        'Las características físicas externas de las viviendas, las vías de acceso y el entorno urbano del vecindario',
+        'Únicamente el historial académico de los integrantes de la familia',
+        'La marca de los dispositivos electrónicos dentro del hogar',
+        'La cantidad de libros almacenados en la vivienda'
+      ],
+      'correctAnswer':
+          'Las características físicas externas de las viviendas, las vías de acceso y el entorno urbano del vecindario',
+    },
+
+    // ==========================================
+    // 5. CIENCIAS EXACTAS: MATEMÁTICAS BÁSICA (Preguntas 14 - 17)
+    // ==========================================
+    {
+      'category': 'Ciencias Exactas: Matemáticas Básica',
+      'question':
+          'Una licencia de software educativo cuesta \$240.000 COP. Si la universidad otorga un descuento del 25% para estudiantes de primer semestre, ¿cuál es el valor final a pagar?',
+      'image': 'https://images.unsplash.com/photo-1509228468518-180dd4864904',
+      'options': [
+        '\$180.000 COP',
+        '\$190.000 COP',
+        '\$60.000 COP',
+        '\$215.000 COP'
+      ],
+      'correctAnswer': '\$180.000 COP',
     },
     {
-      'question': '¿Por qué un pasajero tiende a inclinarse hacia adelante cuando un vehículo frena bruscamente?',
-      'image': 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
-      'options': ['Por la inercia', 'Por la gravedad que desaparece', 'Por la fuerza magnética', 'Por la ausencia de masa']
+      'category': 'Ciencias Exactas: Matemáticas Básica',
+      'question':
+          'Resuelve la siguiente ecuación lineal de primer grado y determina el valor exacto de x:  3x + 7 = 28',
+      'image': 'https://images.unsplash.com/photo-1509228468518-180dd4864904',
+      'options': ['x = 7', 'x = 9', 'x = 11', 'x = 6'],
+      'correctAnswer': 'x = 7',
     },
     {
-      'question': 'Dos focos idénticos se conectan en paralelo a una batería ideal. Si uno se desconecta, ¿qué ocurre con el otro?',
-      'image': 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31',
-      'options': ['También se apaga necesariamente', 'Sigue encendido', 'Su resistencia se vuelve infinita', 'La batería deja de funcionar']
+      'category': 'Ciencias Exactas: Matemáticas Básica',
+      'question':
+          'En un triángulo rectángulo, los dos catetos perpendiculares miden 6 cm y 8 cm. Aplicando el Teorema de Pitágoras (c² = a² + b²), ¿cuánto mide la hipotenusa c?',
+      'image': 'https://images.unsplash.com/photo-1509228468518-180dd4864904',
+      'options': ['10 cm', '14 cm', '12 cm', '100 cm'],
+      'correctAnswer': '10 cm',
     },
     {
-      'question': 'Cuando no entiendes un tema complejo, ¿qué conducta favorece más tu aprendizaje?',
-      'image': 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
-      'options': ['Ocultar la dificultad y evitar preguntar', 'Dividirlo en partes, consultar fuentes y practicar', 'Memorizar respuestas sin comprender', 'Concluir que no tienes capacidad']
+      'category': 'Ciencias Exactas: Matemáticas Básica',
+      'question':
+          'Si un servidor procesa 150 solicitudes académicas en 3 minutos a ritmo constante, ¿cuántas solicitudes procesará en 8 minutos?',
+      'image': 'https://images.unsplash.com/photo-1509228468518-180dd4864904',
+      'options': [
+        '400 solicitudes',
+        '350 solicitudes',
+        '450 solicitudes',
+        '240 solicitudes'
+      ],
+      'correctAnswer': '400 solicitudes',
+    },
+
+    // ==========================================
+    // 6. CIENCIAS EXACTAS: FÍSICA BÁSICA (Preguntas 18 - 20)
+    // ==========================================
+    {
+      'category': 'Ciencias Exactas: Física Básica',
+      'question':
+          'Un tren eléctrico se desplaza en línea recta con velocidad constante y recorre 180 kilómetros en 2 horas. ¿Cuál es su rapidez media en km/h y su equivalente en m/s?',
+      'image': 'https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa',
+      'options': [
+        '90 km/h (equivalente a 25 m/s)',
+        '360 km/h (equivalente a 100 m/s)',
+        '60 km/h (equivalente a 16,6 m/s)',
+        '90 km/h (equivalente a 90 m/s)'
+      ],
+      'correctAnswer': '90 km/h (equivalente a 25 m/s)',
     },
     {
-      'question': 'En un trabajo en equipo, un compañero propone una solución distinta a la tuya y presenta argumentos. ¿Qué respuesta es más constructiva?',
-      'image': 'https://images.unsplash.com/photo-1516321497487-e288fb19713f',
-      'options': ['Rechazarla porque no fue tu idea', 'Escuchar, comparar evidencias y probar la alternativa si es viable', 'Ignorarlo y continuar solo', 'Cambiar de opinión sin analizar nada']
+      'category': 'Ciencias Exactas: Física Básica',
+      'question':
+          'Sobre un bloque de masa m = 12 kg en una superficie sin fricción se aplica una fuerza neta horizontal F = 60 N. Según la Segunda Ley de Newton (F = m · a), ¿qué aceleración adquiere?',
+      'image': 'https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa',
+      'options': ['5 m/s²', '720 m/s²', '0,2 m/s²', '48 m/s²'],
+      'correctAnswer': '5 m/s²',
     },
     {
-      'question': 'Después de cometer un error en un cálculo importante, ¿qué acción demuestra responsabilidad?',
-      'image': 'https://images.unsplash.com/photo-1517180102446-f3ece451e9d8',
-      'options': ['Ocultarlo para evitar críticas', 'Culpar al compañero', 'Informarlo, revisar el procedimiento y corregirlo', 'Entregar el resultado sin verificar']
+      'category': 'Ciencias Exactas: Física Básica',
+      'question':
+          'Una esfera de masa m = 2 kg se sostiene a una altura h = 10 m sobre el suelo (g = 10 m/s²). ¿Cuál es su energía potencial gravitatoria inicial (Ep = m · g · h)?',
+      'image': 'https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa',
+      'options': [
+        '200 Joules (J)',
+        '20 Joules (J)',
+        '100 Joules (J)',
+        '400 Joules (J)'
+      ],
+      'correctAnswer': '200 Joules (J)',
     },
-    {
-      'question': 'Ante una tarea difícil que requiere varias horas de concentración, ¿qué estrategia suele ser más efectiva?',
-      'image': 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
-      'options': ['Trabajar sin pausas hasta agotarse', 'Planificar etapas, priorizar y revisar avances', 'Esperar hasta el último momento', 'Hacer varias tareas sin terminar ninguna']
-    },
-    {
-      'question': 'Si recibes una crítica específica sobre tu trabajo, ¿qué actitud refleja apertura al aprendizaje?',
-      'image': 'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
-      'options': ['Tomarla como un ataque personal', 'Evaluarla con calma y decidir qué mejorar', 'Ignorar cualquier comentario', 'Abandonar la actividad']
-    },
-    {
-      'question': 'Cuando dos fuentes presentan resultados contradictorios, ¿qué deberías hacer primero?',
-      'image': 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
-      'options': ['Elegir la que confirme tu opinión', 'Comparar métodos, datos y confiabilidad de ambas', 'Compartir ambas sin revisar', 'Asumir que las dos son falsas']
-    },
-    {
-      'question': '¿Cuál es la mejor forma de actuar si detectas que tu equipo está tomando una decisión con información insuficiente?',
-      'image': 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d',
-      'options': ['Guardar silencio para evitar problemas', 'Señalar qué información falta y proponer cómo obtenerla', 'Inventar datos para avanzar', 'Aceptar la decisión sin cuestionarla']
-    },
-    {
-      'question': 'Al enfrentarte a un problema para el que no conoces la fórmula, ¿qué opción refleja mejor una disposición adecuada para estudiar ingeniería?',
-      'image': 'https://images.unsplash.com/photo-1563013544-824ae1b704d3',
-      'options': ['Rendirse de inmediato', 'Identificar los datos, buscar principios relacionados y construir un procedimiento', 'Escoger cualquier fórmula', 'Esperar siempre a que otra persona lo resuelva']
-    }
   ];
 
   @override
@@ -244,7 +311,6 @@ class _ExamScreenState extends State<ExamScreen> {
 
   String formatTime(int seconds) {
     int minutes = seconds ~/ 60;
-
     int remainingSeconds = seconds % 60;
 
     return '${minutes.toString().padLeft(2, '0')}:'
@@ -254,445 +320,346 @@ class _ExamScreenState extends State<ExamScreen> {
   @override
   void dispose() {
     timer?.cancel();
-
     super.dispose();
   }
 
-  final Color darkBlue = const Color(0xFF06142E);
-  final Color green = const Color(0xFF0F8B5F);
+  void nextQuestion() {
+    if (currentQuestion < questions.length - 1) {
+      setState(() {
+        currentQuestion++;
+      });
+    }
+  }
+
+  void previousQuestion() {
+    if (currentQuestion > 0) {
+      setState(() {
+        currentQuestion--;
+      });
+    }
+  }
+
+  void selectAnswer(String option) {
+    setState(() {
+      selectedAnswers[currentQuestion] = option;
+    });
+  }
+
+  void finishExam() {
+    timer?.cancel();
+
+    int correct = 0;
+    for (int i = 0; i < questions.length; i++) {
+      final expected =
+          questions[i]['correctAnswer'] ?? questions[i]['options'][0];
+      if (selectedAnswers[i] == expected) {
+        correct++;
+      }
+    }
+
+    double score = (correct / questions.length) * 5.0;
+
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => ResultScreen(
+          score: score,
+          totalQuestions: questions.length,
+          correctAnswers: correct,
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     final question = questions[currentQuestion];
+    final progress = (currentQuestion + 1) / questions.length;
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF4F7FB),
-      body: Row(
-        children: [
-          /// SIDEBAR
-          Container(
-            width: 300,
-            color: darkBlue,
-            child: Padding(
-              padding: const EdgeInsets.all(28),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(height: 30),
-
-                  const Text(
-                    'UniTest',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 34,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-
-                  const SizedBox(height: 40),
-
-                  /// TIMER
-                  Container(
-                    width: double.infinity,
-                    padding: const EdgeInsets.all(25),
-                    decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.08),
-                      borderRadius: BorderRadius.circular(24),
-                    ),
-                    child: Column(
-                      children: [
-                        const Icon(
-                          Icons.timer,
-                          color: Colors.white,
-                          size: 40,
-                        ),
-                        const SizedBox(height: 18),
-                        Text(
-                          formatTime(timeLeft),
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 38,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        const SizedBox(height: 10),
-                        const Text(
-                          'Tiempo restante',
-                          style: TextStyle(
-                            color: Colors.white70,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-
-                  const SizedBox(height: 35),
-
-                  const Text(
-                    'Preguntas',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-
-                  const SizedBox(height: 20),
-
-                  Expanded(
-                    child: GridView.builder(
-                      itemCount: questions.length,
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 4,
-                        crossAxisSpacing: 12,
-                        mainAxisSpacing: 12,
-                      ),
-                      itemBuilder: (_, index) {
-                        final active = currentQuestion == index;
-
-                        return GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              currentQuestion = index;
-                            });
-                          },
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: active
-                                  ? green
-                                  : Colors.white.withOpacity(0.08),
-                              borderRadius: BorderRadius.circular(18),
-                            ),
-                            child: Center(
-                              child: Text(
-                                '${index + 1}',
-                                style: const TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ),
-                        );
-                      },
-                    ),
-                  ),
-
-                  const SizedBox(height: 20),
-
-                  SizedBox(
-                    width: double.infinity,
-                    height: 60,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.red,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18),
-                        ),
-                      ),
-                      onPressed: () {
-                        timer?.cancel();
-
-                        int score = 0;
-
-                        final correctAnswers = {
-                          0: '23',
-                          1: 'Repetir el experimento controlando las demás variables',
-                          2: 'Temperatura',
-                          3: 'No se puede afirmar que un prototipo del lote A haya fallado',
-                          4: '30',
-                          5: 'Laura está antes que Sara',
-                          6: 'Analizar la causa común y descartar enfoques equivalentes',
-                          7: '38',
-                          8: 'Masa',
-                          9: 'La temperatura',
-                          10: 'Calibrador o pie de rey',
-                          11: '4 g/cm³',
-                          12: 'Una explicación provisional que puede ponerse a prueba',
-                          13: 'Aumentan su energía cinética promedio',
-                          14: 'Amperio',
-                          15: 'Movimiento con velocidad constante',
-                          16: '36',
-                          17: 'x = 3',
-                          18: '$60.000',
-                          19: '5/6',
-                          20: '84 m²',
-                          21: '15',
-                          22: '60 km/h',
-                          23: '2/5',
-                          24: '12 N',
-                          25: 'Disminuye',
-                          26: 'Joule',
-                          27: '2 A',
-                          28: 'Aumenta',
-                          29: '2 m/s²',
-                          30: 'Por la inercia',
-                          31: 'Sigue encendido',
-                          32: 'Dividirlo en partes, consultar fuentes y practicar',
-                          33: 'Escuchar, comparar evidencias y probar la alternativa si es viable',
-                          34: 'Informarlo, revisar el procedimiento y corregirlo',
-                          35: 'Planificar etapas, priorizar y revisar avances',
-                          36: 'Evaluarla con calma y decidir qué mejorar',
-                          37: 'Comparar métodos, datos y confiabilidad de ambas',
-                          38: 'Señalar qué información falta y proponer cómo obtenerla',
-                          39: 'Identificar los datos, buscar principios relacionados y construir un procedimiento',
-                        };
-
-                        selectedAnswers.forEach((key, value) {
-                          if (correctAnswers[key] == value) {
-                            score++;
-                          }
-                        });
-
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (_) => ResultScreen(
-                              score: score,
-                              total: questions.length,
-                            ),
-                          ),
-                        );
-                      },
-                      child: const Text(
-                        'Enviar Examen',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-
-          /// CONTENT
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(40),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
+      backgroundColor: const Color(0xFFF4F6FA),
+      appBar: AppBar(
+        title: const Text('Evaluación de Conocimientos Básicos'),
+        backgroundColor: const Color(0xFF0F172A),
+        foregroundColor: Colors.white,
+        centerTitle: true,
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Card(
+                elevation: 2,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Pregunta ${currentQuestion + 1}',
+                            'Pregunta ${currentQuestion + 1} de ${questions.length}',
                             style: const TextStyle(
-                              fontSize: 42,
+                              fontSize: 16,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          const SizedBox(height: 8),
+                          const SizedBox(height: 4),
                           Text(
-                            'Evaluación de Ingeniería de Software',
+                            'Módulo: ${question['category'] ?? 'General'} • Avance: ${(progress * 100).toInt()}%',
                             style: TextStyle(
-                              color: Colors.grey.shade600,
-                              fontSize: 18,
+                              color: Colors.grey[600],
+                              fontSize: 13,
                             ),
                           ),
                         ],
                       ),
                       Container(
                         padding: const EdgeInsets.symmetric(
-                          horizontal: 22,
-                          vertical: 16,
+                          horizontal: 14,
+                          vertical: 8,
                         ),
                         decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(18),
+                          color: const Color(0xFF0F172A),
+                          borderRadius: BorderRadius.circular(20),
                         ),
-                        child: Text(
-                          '${currentQuestion + 1}/${questions.length}',
-                          style: const TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
+                        child: Row(
+                          children: [
+                            const Icon(
+                              Icons.timer,
+                              color: Colors.white,
+                              size: 18,
+                            ),
+                            const SizedBox(width: 6),
+                            Text(
+                              formatTime(timeLeft),
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ],
                   ),
-                  const SizedBox(height: 35),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child: LinearProgressIndicator(
-                      value: (currentQuestion + 1) / questions.length,
-                      minHeight: 12,
-                      backgroundColor: Colors.grey.shade300,
-                      color: green,
-                    ),
+                ),
+              ),
+
+              const SizedBox(height: 16),
+
+              ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: LinearProgressIndicator(
+                  value: progress,
+                  minHeight: 10,
+                  backgroundColor: Colors.grey[300],
+                  valueColor: const AlwaysStoppedAnimation<Color>(
+                    Color(0xFF2563EB),
                   ),
-                  const SizedBox(height: 40),
-                  Expanded(
-                    child: SingleChildScrollView(
-                      child: Container(
-                        width: double.infinity,
-                        padding: const EdgeInsets.all(40),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(35),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.04),
-                              blurRadius: 20,
+                ),
+              ),
+
+              const SizedBox(height: 20),
+
+              Card(
+                elevation: 3,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
+                    children: [
+                      if (question['category'] != null)
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 12),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 6,
+                          ),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF2563EB).withOpacity(0.1),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Text(
+                            question['category'],
+                            style: const TextStyle(
+                              color: Color(0xFF2563EB),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 13,
                             ),
-                          ],
+                          ),
                         ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              question['question'],
-                              style: const TextStyle(
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold,
-                                height: 1.4,
-                              ),
-                            ),
-                            const SizedBox(height: 35),
-                            Container(
-                              height: 260,
-                              width: double.infinity,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(24),
-                              ),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(24),
-                                child: Image.network(
-                                  question['image'],
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                            const SizedBox(height: 35),
-                            ...List.generate(
-                              question['options'].length,
-                              (index) {
-                                final option = question['options'][index];
 
-                                final selected =
-                                    selectedAnswers[currentQuestion] == option;
-
-                                return GestureDetector(
-                                  onTap: () {
-                                    setState(() {
-                                      selectedAnswers[currentQuestion] = option;
-                                    });
-                                  },
-                                  child: Container(
-                                    margin: const EdgeInsets.only(
-                                      bottom: 18,
-                                    ),
-                                    padding: const EdgeInsets.all(24),
-                                    decoration: BoxDecoration(
-                                      color: selected
-                                          ? green.withOpacity(0.08)
-                                          : const Color(0xFFF4F7FB),
-                                      borderRadius: BorderRadius.circular(20),
-                                      border: Border.all(
-                                        color: selected
-                                            ? green
-                                            : Colors.transparent,
-                                        width: 2,
-                                      ),
-                                    ),
-                                    child: Row(
-                                      children: [
-                                        CircleAvatar(
-                                          radius: 20,
-                                          backgroundColor: selected
-                                              ? green
-                                              : Colors.grey.shade300,
-                                          child: Text(
-                                            String.fromCharCode(
-                                              65 + index,
-                                            ),
-                                            style: TextStyle(
-                                              color: selected
-                                                  ? Colors.white
-                                                  : Colors.black,
-                                            ),
-                                          ),
-                                        ),
-                                        const SizedBox(width: 20),
-                                        Expanded(
-                                          child: Text(
-                                            option,
-                                            style: const TextStyle(
-                                              fontSize: 18,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                );
-                              },
-                            ),
-                            const SizedBox(height: 20),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                OutlinedButton(
-                                  style: OutlinedButton.styleFrom(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 30,
-                                      vertical: 20,
-                                    ),
-                                  ),
-                                  onPressed: () {
-                                    if (currentQuestion > 0) {
-                                      setState(() {
-                                        currentQuestion--;
-                                      });
-                                    }
-                                  },
-                                  child: const Text(
-                                    'Anterior',
-                                  ),
-                                ),
-                                ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    backgroundColor: green,
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 35,
-                                      vertical: 20,
-                                    ),
-                                  ),
-                                  onPressed: () {
-                                    if (currentQuestion <
-                                        questions.length - 1) {
-                                      setState(() {
-                                        currentQuestion++;
-                                      });
-                                    }
-                                  },
-                                  child: const Text(
-                                    'Siguiente',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(12),
+                        child: Image.network(
+                          question['image'],
+                          height: 180,
+                          width: double.infinity,
+                          fit: BoxFit.cover,
+                          errorBuilder: (context, error, stackTrace) {
+                            return Container(
+                              height: 180,
+                              color: Colors.grey[300],
+                              child: const Icon(
+                                Icons.image,
+                                size: 50,
+                                color: Colors.grey,
+                              ),
+                            );
+                          },
                         ),
                       ),
+
+                      const SizedBox(height: 20),
+
+                      Text(
+                        question['question'],
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF0F172A),
+                        ),
+                      ),
+
+                      const SizedBox(height: 20),
+
+                      ...List.generate(
+                        question['options'].length,
+                        (index) {
+                          String option = question['options'][index];
+                          bool isSelected =
+                              selectedAnswers[currentQuestion] == option;
+
+                          return Container(
+                            margin: const EdgeInsets.only(bottom: 12),
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: isSelected
+                                    ? const Color(0xFF2563EB)
+                                    : Colors.white,
+                                foregroundColor: isSelected
+                                    ? Colors.white
+                                    : const Color(0xFF0F172A),
+                                side: BorderSide(
+                                  color: isSelected
+                                      ? const Color(0xFF2563EB)
+                                      : Colors.grey[300]!,
+                                  width: 1.5,
+                                ),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                padding: const EdgeInsets.symmetric(
+                                  vertical: 14,
+                                  horizontal: 16,
+                                ),
+                                alignment: Alignment.centerLeft,
+                              ),
+                              onPressed: () => selectAnswer(option),
+                              child: Row(
+                                children: [
+                                  CircleAvatar(
+                                    radius: 14,
+                                    backgroundColor: isSelected
+                                        ? Colors.white
+                                        : Colors.grey[200],
+                                    child: Text(
+                                      String.fromCharCode(65 + index),
+                                      style: TextStyle(
+                                        color: isSelected
+                                            ? const Color(0xFF2563EB)
+                                            : Colors.grey[700],
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(width: 12),
+                                  Expanded(
+                                    child: Text(
+                                      option,
+                                      style: const TextStyle(
+                                        fontSize: 15,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          );
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 20),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.grey[300],
+                      foregroundColor: const Color(0xFF0F172A),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 12,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                    onPressed:
+                        currentQuestion > 0 ? previousQuestion : null,
+                    icon: const Icon(Icons.arrow_back),
+                    label: const Text('Anterior'),
+                  ),
+
+                  ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor:
+                          currentQuestion == questions.length - 1
+                              ? Colors.green
+                              : const Color(0xFF2563EB),
+                      foregroundColor: Colors.white,
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 12,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                    onPressed: currentQuestion == questions.length - 1
+                        ? finishExam
+                        : nextQuestion,
+                    icon: Icon(
+                      currentQuestion == questions.length - 1
+                          ? Icons.check_circle
+                          : Icons.arrow_forward,
+                    ),
+                    label: Text(
+                      currentQuestion == questions.length - 1
+                          ? 'Finalizar'
+                          : 'Siguiente',
                     ),
                   ),
                 ],
               ),
-            ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }
