@@ -20,231 +20,205 @@ class _ExamScreenState extends State<ExamScreen> {
 
   final List<Map<String, dynamic>> questions = [
     {
-      'question':
-          '¿Qué arquitectura es más adecuada para sistemas distribuidos escalables?',
+      'question': 'En una secuencia numérica, cada término se obtiene multiplicando el anterior por 2 y sumando 1. Si comienza en 2, ¿cuál es el cuarto término?',
       'image': 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
-      'options': ['Microservicios', 'Monolito', 'MVC', 'Cliente-servidor']
+      'options': ['19', '21', '23', '25']
     },
     {
-      'question': '¿Qué estructura optimiza búsquedas binarias?',
+      'question': 'Un estudiante observa que una planta crece más con cierta cantidad de luz. ¿Qué debería hacer para comprobar si la luz es la causa?',
       'image': 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
-      'options': ['Array ordenado', 'Pila', 'Cola', 'Lista enlazada']
+      'options': ['Cambiar luz, agua y suelo al mismo tiempo', 'Repetir el experimento controlando las demás variables', 'Medir una sola planta una vez', 'Aceptar la primera observación como prueba']
     },
     {
-      'question': '¿Qué diagrama UML representa interacción temporal?',
+      'question': 'Completa la analogía: brújula es a orientación como termómetro es a…',
       'image': 'https://images.unsplash.com/photo-1555949963-aa79dcee981c',
-      'options': ['Secuencia', 'Clases', 'Objetos', 'Paquetes']
+      'options': ['Velocidad', 'Presión', 'Temperatura', 'Distancia']
     },
     {
-      'question': '¿Qué consulta SQL elimina duplicados?',
+      'question': 'Si todos los prototipos del lote A fueron revisados y algunos dispositivos revisados fallaron, ¿qué conclusión es necesariamente válida?',
       'image': 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d',
-      'options': ['DISTINCT', 'GROUP BY', 'ORDER BY', 'DELETE']
+      'options': ['Todos los prototipos del lote A fallaron', 'Ningún prototipo del lote A falló', 'No se puede afirmar que un prototipo del lote A haya fallado', 'Todos los dispositivos revisados pertenecen al lote A']
     },
     {
-      'question': '¿Qué patrón desacopla eventos?',
+      'question': 'Una máquina produce 6 piezas en 4 minutos. Manteniendo el mismo ritmo, ¿cuántas piezas produce en 20 minutos?',
       'image': 'https://images.unsplash.com/photo-1516321497487-e288fb19713f',
-      'options': ['Observer', 'Factory', 'Adapter', 'Singleton']
+      'options': ['24', '26', '30', '36']
     },
     {
-      'question': '¿Qué metodología usa iteraciones rápidas?',
+      'question': 'En una fila, Laura está antes que Mateo y Mateo antes que Sara. ¿Cuál afirmación es correcta?',
       'image': 'https://images.unsplash.com/photo-1522071820081-009f0129c71c',
-      'options': ['Scrum', 'Cascada', 'RUP', 'XP']
+      'options': ['Sara está antes que Laura', 'Mateo está antes que Laura', 'Laura está antes que Sara', 'No se puede establecer el orden']
     },
     {
-      'question': '¿Qué principio SOLID evita dependencias rígidas?',
+      'question': 'Un problema tiene cinco posibles soluciones. Después de probar tres, todas fallan por la misma razón. ¿Qué estrategia es más razonable?',
       'image': 'https://images.unsplash.com/photo-1516116216624-53e697fedbea',
-      'options': [
-        'Dependency Inversion',
-        'Open/Closed',
-        'Single Responsibility',
-        'Liskov'
-      ]
+      'options': ['Seguir probando al azar', 'Analizar la causa común y descartar enfoques equivalentes', 'Elegir la primera solución', 'Abandonar sin revisar los datos']
     },
     {
-      'question': '¿Qué protocolo usa cifrado HTTPS?',
+      'question': '¿Qué número continúa la serie: 3, 6, 11, 18, 27, …?',
       'image': 'https://images.unsplash.com/photo-1563013544-824ae1b704d3',
-      'options': ['TLS/SSL', 'FTP', 'SMTP', 'SSH']
+      'options': ['34', '36', '38', '40']
     },
     {
-      'question': '¿Qué algoritmo tiene complejidad O(log n)?',
+      'question': '¿Cuál de las siguientes magnitudes es una magnitud fundamental del Sistema Internacional?',
       'image': 'https://images.unsplash.com/photo-1516321165247-4aa89a48be28',
-      'options': [
-        'Búsqueda binaria',
-        'Bubble sort',
-        'Recorrido lineal',
-        'Inserción'
-      ]
+      'options': ['Fuerza', 'Energía', 'Masa', 'Presión']
     },
     {
-      'question': '¿Qué componente maneja rutas en Flutter?',
+      'question': 'En un experimento, se modifica la temperatura y se mide cuánto tarda en disolverse una sustancia. ¿Cuál es la variable independiente?',
       'image': 'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
-      'options': ['Navigator', 'Scaffold', 'Container', 'FutureBuilder']
+      'options': ['El tiempo de disolución', 'La temperatura', 'La cantidad disuelta', 'El resultado final']
     },
     {
-      'question': '¿Qué tipo de prueba valida módulos individuales?',
+      'question': '¿Qué instrumento es el más adecuado para medir el diámetro de una pieza pequeña con precisión?',
       'image': 'https://images.unsplash.com/photo-1516321310764-8d4f1c2b0e0b',
-      'options': ['Unitarias', 'Integración', 'Aceptación', 'Estrés']
+      'options': ['Cronómetro', 'Balanza', 'Calibrador o pie de rey', 'Termómetro']
     },
     {
-      'question': '¿Qué base de datos es NoSQL?',
+      'question': 'Una sustancia tiene masa de 200 g y ocupa 50 cm³. ¿Cuál es su densidad?',
       'image': 'https://images.unsplash.com/photo-1451187580459-43490279c0fa',
-      'options': ['MongoDB', 'PostgreSQL', 'MySQL', 'Oracle']
+      'options': ['2 g/cm³', '4 g/cm³', '5 g/cm³', '10 g/cm³']
     },
     {
-      'question': '¿Qué técnica reduce redundancia en bases de datos?',
+      'question': '¿Qué representa una hipótesis científica?',
       'image': 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d',
-      'options': ['Normalización', 'Replicación', 'Indexación', 'Hashing']
+      'options': ['Una opinión imposible de comprobar', 'Una explicación provisional que puede ponerse a prueba', 'Una conclusión que nunca cambia', 'Una observación sin relación con el problema']
     },
     {
-      'question': '¿Qué lenguaje usa Flutter?',
+      'question': 'Si un objeto está formado por partículas y se calienta, normalmente sus partículas…',
       'image': 'https://images.unsplash.com/photo-1517180102446-f3ece451e9d8',
-      'options': ['Dart', 'Kotlin', 'Swift', 'Python']
+      'options': ['Dejan de moverse', 'Disminuyen siempre su tamaño', 'Aumentan su energía cinética promedio', 'Se convierten automáticamente en otro elemento']
     },
     {
-      'question': '¿Qué HTTP method actualiza recursos?',
+      'question': '¿Cuál es la unidad de corriente eléctrica en el Sistema Internacional?',
       'image': 'https://images.unsplash.com/photo-1518770660439-4636190af475',
-      'options': ['PUT', 'GET', 'DELETE', 'OPTIONS']
+      'options': ['Voltio', 'Ohmio', 'Amperio', 'Vatio']
     },
     {
-      'question': '¿Qué estructura sigue LIFO?',
+      'question': 'En una gráfica de distancia contra tiempo, una línea recta con pendiente constante distinta de cero representa…',
       'image': 'https://images.unsplash.com/photo-1516321497487-e288fb19713f',
-      'options': ['Pila', 'Cola', 'Árbol', 'Hash']
+      'options': ['Movimiento con velocidad constante', 'Reposo', 'Aceleración que aumenta continuamente', 'Cambio aleatorio de dirección']
     },
     {
-      'question': '¿Qué servicio permite contenerización?',
+      'question': '¿Cuánto es el 15 % de 240?',
       'image': 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31',
-      'options': ['Docker', 'Git', 'Firebase', 'Linux']
+      'options': ['24', '30', '36', '40']
     },
     {
-      'question': '¿Qué framework pertenece a Python?',
+      'question': 'Resuelve: 3(2x − 1) = 15.',
       'image': 'https://images.unsplash.com/photo-1526379095098-d400fd0bf935',
-      'options': ['Django', 'Laravel', 'Spring', 'Express']
+      'options': ['x = 2', 'x = 3', 'x = 4', 'x = 6']
     },
     {
-      'question': '¿Qué principio evita modificar código existente?',
+      'question': 'Una chaqueta cuesta $80.000 y tiene un descuento del 25 %. ¿Cuál es el precio final?',
       'image': 'https://images.unsplash.com/photo-1516110833967-214a2a0d3f5b',
-      'options': [
-        'Open/Closed',
-        'Single Responsibility',
-        'Interface Segregation',
-        'Liskov'
-      ]
+      'options': ['$55.000', '$60.000', '$65.000', '$75.000']
     },
     {
-      'question': '¿Qué herramienta versiona código?',
+      'question': '¿Cuál es el resultado de 2/3 + 1/6?',
       'image': 'https://images.unsplash.com/photo-1556075798-4825dfaaf498',
-      'options': ['Git', 'Docker', 'Jira', 'Figma']
+      'options': ['1/2', '2/9', '5/6', '1']
     },
     {
-      'question': '¿Qué arquitectura usa APIs REST?',
+      'question': 'Un terreno rectangular mide 12 m de largo y 7 m de ancho. ¿Cuál es su área?',
       'image': 'https://images.unsplash.com/photo-1555949963-f6a0d0d5d9d8',
-      'options': ['Cliente-servidor', 'P2P', 'Mainframe', 'Monolito']
+      'options': ['19 m²', '38 m²', '84 m²', '168 m²']
     },
     {
-      'question': '¿Qué lenguaje se ejecuta en navegador?',
+      'question': 'Si f(x) = 2x² − 3, ¿cuánto vale f(3)?',
       'image': 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
-      'options': ['JavaScript', 'Java', 'C#', 'Go']
+      'options': ['9', '12', '15', '18']
     },
     {
-      'question': '¿Qué prueba mide rendimiento extremo?',
+      'question': 'Un automóvil recorre 150 km en 2,5 horas a velocidad constante. ¿Cuál es su velocidad promedio?',
       'image': 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
-      'options': ['Estrés', 'Unitaria', 'Caja blanca', 'Aceptación']
+      'options': ['50 km/h', '55 km/h', '60 km/h', '75 km/h']
     },
     {
-      'question': '¿Qué comando descarga dependencias Flutter?',
+      'question': 'En un grupo hay 18 mujeres y 12 hombres. ¿Qué fracción del grupo corresponde a los hombres?',
       'image': 'https://images.unsplash.com/photo-1517180102446-f3ece451e9d8',
-      'options': [
-        'flutter pub get',
-        'flutter clean',
-        'flutter build',
-        'flutter create'
-      ]
+      'options': ['2/5', '3/5', '2/3', '3/2']
     },
     {
-      'question': '¿Qué API maneja peticiones HTTP en Flutter?',
+      'question': 'Un objeto de 4 kg acelera a 3 m/s². Según la segunda ley de Newton, ¿qué fuerza neta actúa sobre él?',
       'image': 'https://images.unsplash.com/photo-1516321310764-8d4f1c2b0e0b',
-      'options': ['http', 'material', 'dart:ui', 'provider']
+      'options': ['7 N', '12 N', '16 N', '24 N']
     },
     {
-      'question': '¿Qué estructura almacena pares clave-valor?',
+      'question': 'Se deja caer una pelota desde cierta altura, despreciando la resistencia del aire. Durante la caída, su energía potencial gravitatoria…',
       'image': 'https://images.unsplash.com/photo-1526379095098-d400fd0bf935',
-      'options': ['Map', 'List', 'Queue', 'Stack']
+      'options': ['Aumenta', 'Disminuye', 'Permanece siempre igual', 'Se convierte en masa']
     },
     {
-      'question': '¿Qué sistema usa integración continua?',
+      'question': '¿Cuál es la unidad de energía en el Sistema Internacional?',
       'image': 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31',
-      'options': ['CI/CD', 'FTP', 'SOAP', 'REST']
+      'options': ['Newton', 'Pascal', 'Joule', 'Amperio']
     },
     {
-      'question': '¿Qué método HTTP obtiene datos?',
+      'question': 'Una resistencia de 6 Ω se conecta a una fuente de 12 V. ¿Qué corriente circula por ella?',
       'image': 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d',
-      'options': ['GET', 'POST', 'PATCH', 'DELETE']
+      'options': ['0,5 A', '2 A', '6 A', '72 A']
     },
     {
-      'question': '¿Qué servicio despliega apps serverless?',
+      'question': '¿Qué sucede con la presión sobre una superficie si se aplica la misma fuerza sobre un área menor?',
       'image': 'https://images.unsplash.com/photo-1451187580459-43490279c0fa',
-      'options': ['AWS Lambda', 'Docker', 'Kubernetes', 'Firebase Auth']
+      'options': ['Disminuye', 'Aumenta', 'No cambia', 'Se vuelve cero']
     },
     {
-      'question': '¿Qué tipo de IA aprende mediante ejemplos?',
+      'question': 'Un ciclista pasa de 4 m/s a 10 m/s en 3 segundos. ¿Cuál es su aceleración media?',
       'image': 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d',
-      'options': ['Machine Learning', 'Compilador', 'Árbol binario', 'Firewall']
+      'options': ['2 m/s²', '3 m/s²', '4 m/s²', '6 m/s²']
     },
     {
-      'question': '¿Qué algoritmo ordena intercambiando elementos?',
+      'question': '¿Por qué un pasajero tiende a inclinarse hacia adelante cuando un vehículo frena bruscamente?',
       'image': 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
-      'options': ['Bubble Sort', 'Merge Sort', 'Quick Sort', 'Heap Sort']
+      'options': ['Por la inercia', 'Por la gravedad que desaparece', 'Por la fuerza magnética', 'Por la ausencia de masa']
     },
     {
-      'question': '¿Qué sistema administra contenedores?',
+      'question': 'Dos focos idénticos se conectan en paralelo a una batería ideal. Si uno se desconecta, ¿qué ocurre con el otro?',
       'image': 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31',
-      'options': ['Kubernetes', 'Git', 'Jira', 'Linux']
+      'options': ['También se apaga necesariamente', 'Sigue encendido', 'Su resistencia se vuelve infinita', 'La batería deja de funcionar']
     },
     {
-      'question': '¿Qué componente Flutter crea layouts flexibles?',
+      'question': 'Cuando no entiendes un tema complejo, ¿qué conducta favorece más tu aprendizaje?',
       'image': 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
-      'options': ['Expanded', 'Scaffold', 'Text', 'AppBar']
+      'options': ['Ocultar la dificultad y evitar preguntar', 'Dividirlo en partes, consultar fuentes y practicar', 'Memorizar respuestas sin comprender', 'Concluir que no tienes capacidad']
     },
     {
-      'question': '¿Qué protocolo envía correos?',
+      'question': 'En un trabajo en equipo, un compañero propone una solución distinta a la tuya y presenta argumentos. ¿Qué respuesta es más constructiva?',
       'image': 'https://images.unsplash.com/photo-1516321497487-e288fb19713f',
-      'options': ['SMTP', 'FTP', 'HTTP', 'SSH']
+      'options': ['Rechazarla porque no fue tu idea', 'Escuchar, comparar evidencias y probar la alternativa si es viable', 'Ignorarlo y continuar solo', 'Cambiar de opinión sin analizar nada']
     },
     {
-      'question': '¿Qué lenguaje compila JVM?',
+      'question': 'Después de cometer un error en un cálculo importante, ¿qué acción demuestra responsabilidad?',
       'image': 'https://images.unsplash.com/photo-1517180102446-f3ece451e9d8',
-      'options': ['Java', 'Python', 'PHP', 'Go']
+      'options': ['Ocultarlo para evitar críticas', 'Culpar al compañero', 'Informarlo, revisar el procedimiento y corregirlo', 'Entregar el resultado sin verificar']
     },
     {
-      'question': '¿Qué propiedad CSS usa Flexbox?',
+      'question': 'Ante una tarea difícil que requiere varias horas de concentración, ¿qué estrategia suele ser más efectiva?',
       'image': 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
-      'options': [
-        'display:flex',
-        'position:absolute',
-        'float:left',
-        'grid-area'
-      ]
+      'options': ['Trabajar sin pausas hasta agotarse', 'Planificar etapas, priorizar y revisar avances', 'Esperar hasta el último momento', 'Hacer varias tareas sin terminar ninguna']
     },
     {
-      'question': '¿Qué framework usa componentes reactivos?',
+      'question': 'Si recibes una crítica específica sobre tu trabajo, ¿qué actitud refleja apertura al aprendizaje?',
       'image': 'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
-      'options': ['React', 'Laravel', 'Spring', 'Django']
+      'options': ['Tomarla como un ataque personal', 'Evaluarla con calma y decidir qué mejorar', 'Ignorar cualquier comentario', 'Abandonar la actividad']
     },
     {
-      'question': '¿Qué algoritmo usa prioridad?',
+      'question': 'Cuando dos fuentes presentan resultados contradictorios, ¿qué deberías hacer primero?',
       'image': 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
-      'options': ['Dijkstra', 'Bubble Sort', 'DFS', 'BFS']
+      'options': ['Elegir la que confirme tu opinión', 'Comparar métodos, datos y confiabilidad de ambas', 'Compartir ambas sin revisar', 'Asumir que las dos son falsas']
     },
     {
-      'question': '¿Qué tipo de relación SQL conecta tablas?',
+      'question': '¿Cuál es la mejor forma de actuar si detectas que tu equipo está tomando una decisión con información insuficiente?',
       'image': 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d',
-      'options': ['JOIN', 'DROP', 'INSERT', 'UPDATE']
+      'options': ['Guardar silencio para evitar problemas', 'Señalar qué información falta y proponer cómo obtenerla', 'Inventar datos para avanzar', 'Aceptar la decisión sin cuestionarla']
     },
     {
-      'question': '¿Qué sistema autentica usuarios?',
+      'question': 'Al enfrentarte a un problema para el que no conoces la fórmula, ¿qué opción refleja mejor una disposición adecuada para estudiar ingeniería?',
       'image': 'https://images.unsplash.com/photo-1563013544-824ae1b704d3',
-      'options': ['OAuth', 'REST', 'FTP', 'SOAP']
-    },
+      'options': ['Rendirse de inmediato', 'Identificar los datos, buscar principios relacionados y construir un procedimiento', 'Escoger cualquier fórmula', 'Esperar siempre a que otra persona lo resuelva']
+    }
   ];
 
   @override
@@ -423,46 +397,46 @@ class _ExamScreenState extends State<ExamScreen> {
                         int score = 0;
 
                         final correctAnswers = {
-                          0: 'Microservicios',
-                          1: 'Array ordenado',
-                          2: 'Secuencia',
-                          3: 'DISTINCT',
-                          4: 'Observer',
-                          5: 'Scrum',
-                          6: 'Dependency Inversion',
-                          7: 'TLS/SSL',
-                          8: 'Búsqueda binaria',
-                          9: 'Navigator',
-                          10: 'Unitarias',
-                          11: 'MongoDB',
-                          12: 'Normalización',
-                          13: 'Dart',
-                          14: 'PUT',
-                          15: 'Pila',
-                          16: 'Docker',
-                          17: 'Django',
-                          18: 'Open/Closed',
-                          19: 'Git',
-                          20: 'Cliente-servidor',
-                          21: 'JavaScript',
-                          22: 'Estrés',
-                          23: 'flutter pub get',
-                          24: 'http',
-                          25: 'Map',
-                          26: 'CI/CD',
-                          27: 'GET',
-                          28: 'AWS Lambda',
-                          29: 'Machine Learning',
-                          30: 'Bubble Sort',
-                          31: 'Kubernetes',
-                          32: 'Expanded',
-                          33: 'SMTP',
-                          34: 'Java',
-                          35: 'display:flex',
-                          36: 'React',
-                          37: 'Dijkstra',
-                          38: 'JOIN',
-                          39: 'OAuth',
+                          0: '23',
+                          1: 'Repetir el experimento controlando las demás variables',
+                          2: 'Temperatura',
+                          3: 'No se puede afirmar que un prototipo del lote A haya fallado',
+                          4: '30',
+                          5: 'Laura está antes que Sara',
+                          6: 'Analizar la causa común y descartar enfoques equivalentes',
+                          7: '38',
+                          8: 'Masa',
+                          9: 'La temperatura',
+                          10: 'Calibrador o pie de rey',
+                          11: '4 g/cm³',
+                          12: 'Una explicación provisional que puede ponerse a prueba',
+                          13: 'Aumentan su energía cinética promedio',
+                          14: 'Amperio',
+                          15: 'Movimiento con velocidad constante',
+                          16: '36',
+                          17: 'x = 3',
+                          18: '$60.000',
+                          19: '5/6',
+                          20: '84 m²',
+                          21: '15',
+                          22: '60 km/h',
+                          23: '2/5',
+                          24: '12 N',
+                          25: 'Disminuye',
+                          26: 'Joule',
+                          27: '2 A',
+                          28: 'Aumenta',
+                          29: '2 m/s²',
+                          30: 'Por la inercia',
+                          31: 'Sigue encendido',
+                          32: 'Dividirlo en partes, consultar fuentes y practicar',
+                          33: 'Escuchar, comparar evidencias y probar la alternativa si es viable',
+                          34: 'Informarlo, revisar el procedimiento y corregirlo',
+                          35: 'Planificar etapas, priorizar y revisar avances',
+                          36: 'Evaluarla con calma y decidir qué mejorar',
+                          37: 'Comparar métodos, datos y confiabilidad de ambas',
+                          38: 'Señalar qué información falta y proponer cómo obtenerla',
+                          39: 'Identificar los datos, buscar principios relacionados y construir un procedimiento',
                         };
 
                         selectedAnswers.forEach((key, value) {
